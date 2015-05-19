@@ -119,6 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#buscar-campanhas">BUSCAR_CAMPANHAS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#importar-mailing">IMPORTAR_MAILING</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resultado-agendamento">RESULTADO_AGENDAMENTO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resultado-contato-discador">RESULTADO_CONTATO_DISCADOR</a></li>
 </ul>
 </li>
 </ul>
@@ -1105,6 +1106,59 @@ Opções: <code class="docutils literal"><span class="pre">Seg</span></code>, <c
 <td>Flag (true, false, Sim, Nao) informa se o agendamento foi eficaz.</td>
 </tr>
 <tr class="row-odd"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="resultado-contato-discador">
+<h2>RESULTADO_CONTATO_DISCADOR<a class="headerlink" href="#resultado-contato-discador" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Informa o discador do resultado de uma ligação atendida.</p>
+<div class="highlight-javascript"><div class="highlight"><pre>  <span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;RESULTADO_CONTATO_DISCADOR&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;eficaz&quot;</span><span class="o">:</span> <span class="s2">&quot;Sim&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;efetivo&quot;</span><span class="o">:</span> <span class="s2">&quot;Sim&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;contato-id&quot;</span><span class="o">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero-contato-id&quot;</span><span class="o">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;campanha-id&quot;</span><span class="o">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agente-disponivel&quot;</span><span class="o">:</span> <span class="s2">&quot;Sim&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>eficaz</td>
+<td>Informa se houve negociação ou não para essa ligação</td>
+</tr>
+<tr class="row-odd"><td>efetivo</td>
+<td>Informa se a ligação foi atendida ou não</td>
+</tr>
+<tr class="row-even"><td>contato-id</td>
+<td>ID do contato no Catix.</td>
+</tr>
+<tr class="row-odd"><td>numero-contato-id</td>
+<td>ID do numero do contato no Catix.</td>
+</tr>
+<tr class="row-even"><td>campanha-id</td>
+<td>ID da campanha que esse contato pertence no Catix.</td>
+</tr>
+<tr class="row-odd"><td>agente-disponivel</td>
+<td>Flag para deixar o agente disponível ou não caso esteja usando a funcionalidade de pausa pós atendimento automatico.</td>
+</tr>
+<tr class="row-even"><td>messageId</td>
 <td>Identificação da mensagem que será retornada junto com a resposta.</td>
 </tr>
 </tbody>

@@ -773,3 +773,42 @@ RESULTADO_AGENDAMENTO
 | messageId           | Identificação da mensagem que será retornada junto com a resposta. |
 +---------------------+--------------------------------------------------------------------+
 
+
+RESULTADO_CONTATO_DISCADOR
+""""""""""""""""""""""""""
+
+**Descrição:** Informa o discador do resultado de uma ligação atendida.
+
+.. code-block:: javascript
+
+    {
+    "tipo": "ACAO",
+    "comando": "RESULTADO_CONTATO_DISCADOR",
+    "messageId": "1",
+    "atributos": {
+      "eficaz": "Sim",
+      "efetivo": "Sim",
+      "contato-id": "15",
+      "numero-contato-id": "1000",
+      "campanha-id": "5",
+      "agente-disponivel": "Sim"
+    }
+  }
+
++-------------------+----------------------------------------------------------------------------------------------------------------------+
+| Campo             | Descrição                                                                                                            |
++===================+======================================================================================================================+
+| eficaz            | Informa se houve negociação ou não para essa ligação                                                                 |
++-------------------+----------------------------------------------------------------------------------------------------------------------+
+| efetivo           | Informa se a ligação foi atendida ou não                                                                             |
++-------------------+----------------------------------------------------------------------------------------------------------------------+
+| contato-id        | ID do contato no Catix.                                                                                              |
++-------------------+----------------------------------------------------------------------------------------------------------------------+
+| numero-contato-id | ID do numero do contato no Catix.                                                                                    |
++-------------------+----------------------------------------------------------------------------------------------------------------------+
+| campanha-id       | ID da campanha que esse contato pertence no Catix.                                                                   |
++-------------------+----------------------------------------------------------------------------------------------------------------------+
+| agente-disponivel | Flag para deixar o agente disponível ou não caso esteja usando a funcionalidade de pausa pós atendimento automatico. |
++-------------------+----------------------------------------------------------------------------------------------------------------------+
+| messageId         | Identificação da mensagem que será retornada junto com a resposta.                                                   |
++-------------------+----------------------------------------------------------------------------------------------------------------------+
