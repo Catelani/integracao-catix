@@ -1,0 +1,698 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lista de Eventos &mdash; Integração Catix 1.1.0 documentação</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Integração Catix 1.1.0 documentação" href="index.html"/>
+        <link rel="next" title="Mensagem de Erro" href="msg_erro.html"/>
+        <link rel="prev" title="Lista de comandos" href="comandos.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Integração Catix
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-1-0-atual">Versão 1.1.0 (Atual)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-internas">Melhorias internas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-eventos">Melhorias nos eventos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-comandos">Melhorias nos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-comandos">Novos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-eventos">Novos eventos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novas-mensagens-de-erro">Novas mensagens de erro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-0-0">Versão 1.0.0</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Informações Basicas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basico.html">Informações de Conexão</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basico.html#formato-das-mensagens">Formato das mensagens</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basico.html#descricao-dos-campos">Descrição dos campos</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Comandos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="info_comandos.html">Informações dos comandos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comandos.html">Lista de comandos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#login-single-user">LOGIN_SINGLE_USER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#login-multi-user">LOGIN_MULTI_USER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#agente-logar">AGENTE_LOGAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#agente-deslogar">AGENTE_DESLOGAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#discar">DISCAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#rediscar">REDISCAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#pausar">PAUSAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#status-agente">STATUS_AGENTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#desligar-chamada">DESLIGAR_CHAMADA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-tipos-pausa">BUSCAR_TIPOS_PAUSA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-ramais">BUSCAR_RAMAIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#transferir">TRANSFERIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-opcoes-transferencia">BUSCAR_OPCOES_TRANSFERENCIA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#sair">SAIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#status-servidor">STATUS_SERVIDOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#informacao-pausa">INFORMACAO_PAUSA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-filas">BUSCAR_FILAS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-estrategias-chamada">BUSCAR_ESTRATEGIAS_CHAMADA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-campanhas">BUSCAR_CAMPANHAS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#importar-mailing">IMPORTAR_MAILING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#resultado-agendamento">RESULTADO_AGENDAMENTO</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Eventos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Lista de Eventos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#agent-login">AGENT_LOGIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agent-logoff">AGENT_LOGOFF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agent-paused">AGENT_PAUSED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agent-unpaused">AGENT_UNPAUSED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agent-complete">AGENT_COMPLETE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dialing">DIALING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#answer">ANSWER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hangup">HANGUP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agent-received-dialer-call">AGENT_RECEIVED_DIALER_CALL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scheduled-call-coming">SCHEDULED_CALL_COMING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scheduled-call-asnwer">SCHEDULED_CALL_ASNWER</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Erros</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msg_erro.html">Mensagem de Erro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="erros.html">Lista de Erros</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Integração Catix</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Lista de Eventos</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/eventos.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="lista-de-eventos">
+<h1>Lista de Eventos<a class="headerlink" href="#lista-de-eventos" title="Link permanente para este título">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">O campo <code class="docutils literal"><span class="pre">informacao</span></code> sempre vira com o nome do evento em questão.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">O campo <code class="docutils literal"><span class="pre">tipo</span></code> sempre será EVENT.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">O campo agente sempre virá com o ID do agente relacionado aquele evento, a menos que seja um evento que não é relacionado a nenhum agente.</p>
+</div>
+<div class="section" id="agent-login">
+<h2>AGENT_LOGIN<a class="headerlink" href="#agent-login" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Evento enviado quando um agente loga no sistema.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;EVENT&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;AGENT_LOGIN&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span> <span class="p">{</span>
+      <span class="s2">&quot;ramal-agente&quot;</span><span class="o">:</span> <span class="s2">&quot;200&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campos</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do agente, no Catix, que realizou o login.</td>
+</tr>
+<tr class="row-odd"><td>atributos-ramal-agente</td>
+<td>Número do ramal fisico que o agente realizou o login.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="agent-logoff">
+<h2>AGENT_LOGOFF<a class="headerlink" href="#agent-logoff" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Evento enviado quando um agente desloga do sistema.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;EVENT&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;AGENT_LOGOFF&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campos</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do agente, no Catix, que realizou o logoff.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="agent-paused">
+<h2>AGENT_PAUSED<a class="headerlink" href="#agent-paused" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Evento enviado quando o agente é pausado.</p>
+<div class="highlight-javascript"><div class="highlight"><pre>{
+  &quot;tipo&quot;: &quot;EVENT&quot;,
+  &quot;agente&quot;: &quot;12&quot;,
+  &quot;informacao&quot;: &quot;AGENT_PAUSED&quot;,
+  &quot;atributos&quot;: {
+    &quot;idPausa&quot;: 1,
+    &quot;pausa&quot;: &quot;Almoço&quot;,
+    &quot;descricao&quot;: “Horário de Almoço&quot;,
+    &quot;obs&quot;: “Observação qualquer&quot;
+  }
+}
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campos</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do Catix do agente que pausou.</td>
+</tr>
+<tr class="row-odd"><td>atributos-idPausa</td>
+<td>ID do Catix da Pausa que ele selecionou.</td>
+</tr>
+<tr class="row-even"><td>atributos-pausa</td>
+<td>Nome da pausa no Catix.</td>
+</tr>
+<tr class="row-odd"><td>atributos-descricao</td>
+<td>Descrição da pausa no Catix.</td>
+</tr>
+<tr class="row-even"><td>atributos-obs</td>
+<td>Observação que o agente colocou ao pausar.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="agent-unpaused">
+<h2>AGENT_UNPAUSED<a class="headerlink" href="#agent-unpaused" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Evento enviado quando o agente é despausado.</p>
+<div class="highlight-javascript"><div class="highlight"><pre>{
+  &quot;tipo&quot;: &quot;EVENT&quot;,
+  &quot;agente&quot;: &quot;12&quot;,
+  &quot;informacao&quot;: &quot;AGENT_UNPAUSED&quot;,
+  &quot;atributos&quot;: {
+    &quot;idPausa&quot;: 1,
+    &quot;pausa&quot;: &quot;Almoço&quot;,
+    &quot;descricao&quot;: “Horário de Almoço&quot;
+  }
+}
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campos</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do Catix do agente que despausou.</td>
+</tr>
+<tr class="row-odd"><td>atributos-idPausa</td>
+<td>ID do Catix da Pausa que ele selecionou.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="agent-complete">
+<h2>AGENT_COMPLETE<a class="headerlink" href="#agent-complete" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Evento enviado quando o agente termina de atender uma ligação.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;EVENT&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;AGENT_COMPLETE&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campos</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do Catix do agente que finalizou a ligação.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dialing">
+<h2>DIALING<a class="headerlink" href="#dialing" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Evento enviado quando o sistema está discando para um número, que <strong>NÃO</strong> é do discador.</p>
+<div class="admonition important">
+<p class="first admonition-title">Importante</p>
+<p class="last">Esse evento <strong>somente</strong> sera enviado caso a ligação seja partindo de um <code class="docutils literal"><span class="pre">AGENTE</span></code>, se for do discador não será enviado, nem se for do Ramal.</p>
+</div>
+<p>Porém, a ligação do agente pode ser feita via integração ou via Painel do Agente no Catix.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;EVENT&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;DIALING&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;origem-tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;AGENTE&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;origem-nome&quot;</span><span class="o">:</span> <span class="s2">&quot;kennedy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero-discado&quot;</span><span class="o">:</span> <span class="s2">&quot;17991762908&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rl&quot;</span><span class="o">:</span> <span class="s2">&quot;5084&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;linked-rl&quot;</span><span class="o">:</span> <span class="s2">&quot;5084&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do Catix do agente que fez a ligação.</td>
+</tr>
+<tr class="row-odd"><td>atributos-origem-nome</td>
+<td>Nome do agente que fez a ligação.</td>
+</tr>
+<tr class="row-even"><td>atributos-rl</td>
+<td>Identificação da chamada no Catix.</td>
+</tr>
+<tr class="row-odd"><td>atributos-linked-rl</td>
+<td>Identificação de todas as chamadas relacionadas a essa chamada no Catix.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="answer">
+<h2>ANSWER<a class="headerlink" href="#answer" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Evento enviado quando um agente atende uma ligação, porém não deve se basear nesse evento quando estiver usando discadores.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Dica</p>
+<p class="last">Para atendimentos do discador, verificar o evento <a class="reference internal" href="#atendeu-ligacao-preditivo"><span>AGENT_RECEIVED_DIALER_CALL</span></a>.</p>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;EVENT&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;ANSWER&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;origem-tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;AGENTE&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;origem-nome&quot;</span><span class="o">:</span> <span class="s2">&quot;kennedy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero-discado&quot;</span><span class="o">:</span> <span class="s2">&quot;17991762908&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rl&quot;</span><span class="o">:</span> <span class="s2">&quot;5084&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;linked-rl&quot;</span><span class="o">:</span> <span class="s2">&quot;5084&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do Catix do agente que atendeu a ligação.</td>
+</tr>
+<tr class="row-odd"><td>atributos-origem-nome</td>
+<td>Nome do agente que fez a ligação.</td>
+</tr>
+<tr class="row-even"><td>atributos-rl</td>
+<td>Identificação da chamada no Catix.</td>
+</tr>
+<tr class="row-odd"><td>atributos-linked-rl</td>
+<td>Identificação de todas as chamadas relacionadas a essa chamada no Catix.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="hangup">
+<h2>HANGUP<a class="headerlink" href="#hangup" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Evento enviado quando uma ligação é desligada.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;EVENT&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;HANGUP&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;origem-tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;AGENTE&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;origem-nome&quot;</span><span class="o">:</span> <span class="s2">&quot;kennedy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero-discado&quot;</span><span class="o">:</span> <span class="s2">&quot;17991762908&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rl&quot;</span><span class="o">:</span> <span class="s2">&quot;5084&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;linked-rl&quot;</span><span class="o">:</span> <span class="s2">&quot;5084&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do Catix do agente que desligou a ligação.</td>
+</tr>
+<tr class="row-odd"><td>atributos-origem-nome</td>
+<td>Nome do agente que fez a ligação.</td>
+</tr>
+<tr class="row-even"><td>atributos-rl</td>
+<td>Identificação da chamada no Catix.</td>
+</tr>
+<tr class="row-odd"><td>atributos-linked-rl</td>
+<td>Identificação de todas são relacionadas aquela chamada no Catix.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="agent-received-dialer-call">
+<span id="atendeu-ligacao-preditivo"></span><h2>AGENT_RECEIVED_DIALER_CALL<a class="headerlink" href="#agent-received-dialer-call" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Evento enviado quando um agente atende uma chamada que é do discador.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;EVENT&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;AGENT_RECEIVED_DIALER_CALL&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;contato-id&quot;</span><span class="o">:</span> <span class="s2">&quot;387076&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;contato-cpfcnpj&quot;</span><span class="o">:</span> <span class="s2">&quot;2994&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;contato-contrato&quot;</span><span class="o">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero-contato-id&quot;</span><span class="o">:</span> <span class="s2">&quot;235041&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero-contato&quot;</span><span class="o">:</span> <span class="s2">&quot;1712345678&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;campanha-id&quot;</span><span class="o">:</span> <span class="s2">&quot;18&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rl&quot;</span><span class="o">:</span> <span class="s2">&quot;5143&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;linked-rl&quot;</span><span class="o">:</span> <span class="s2">&quot;5141&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="scheduled-call-coming">
+<h2>SCHEDULED_CALL_COMING<a class="headerlink" href="#scheduled-call-coming" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Notificação de que uma ligação agendada está prestes a acontecer, em x tempo, esse tempo é configurado no Catix e é valido para todas as ligações agendadas.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;EVENTO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;SCHEDULED_CALL_COMMING&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;agendamento-id&quot;</span><span class="o">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-data-hora&quot;</span><span class="o">:</span> <span class="s2">&quot;08/04/2015 19:13:22&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-destino-tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;Agente&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-destino-tipo-id&quot;</span><span class="o">:</span> <span class="s2">&quot;13&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>atributos-agendamento-id</td>
+<td>Id do agendamento</td>
+</tr>
+<tr class="row-odd"><td>atributos-agendamento-data-hora</td>
+<td>Data e hora do agendamento</td>
+</tr>
+<tr class="row-even"><td>atributos-agendamento-destino-tipo</td>
+<td>Tipo do destino no Catix, atualmente o único possível é <code class="docutils literal"><span class="pre">Agente</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>atributos-agendamento-destino-tipo-id</td>
+<td>Identificação no Catix do destino.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scheduled-call-asnwer">
+<h2>SCHEDULED_CALL_ASNWER<a class="headerlink" href="#scheduled-call-asnwer" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Notificação enviada quando um destino atende uma chamada que é agendada.</p>
+<div class="highlight-javascript"><div class="highlight"><pre>{
+  &quot;tipo&quot;: &quot;EVENTO&quot;,
+  &quot;informacao&quot;: &quot;SCHEDULED_CALL_ANSWER&quot;,
+  &quot;atributos&quot;: {
+    &quot;agendamento-id&quot;: &quot;15&quot;,
+    &quot;agendamento-destino-tipo&quot;: &quot;Agente&quot;,
+    &quot;agendamento-destino-tipo-id&quot;: &quot;13&quot;,
+    &quot;agendamento-cod-referencia&quot;: &quot;123456789&quot;,
+    &quot;contato-id&quot;: &quot;15&quot;,
+    &quot;contato-cpfcnpj&quot;: &quot;40002866749&quot;,
+    &quot;contato-contrato&quot;: &quot;102346123&quot;,
+    &quot;numero-contato-id&quot;: &quot;5678&quot;,
+    &quot;numero-contato&quot;: &quot;17991234798&quot;,
+    &quot;numero-agendamento-id&quot;: “1234&quot;,
+
+    “numero-agendamento”:”17123456778”,
+    &quot;rl&quot;: &quot;12345&quot;,
+    &quot;linked-rl&quot;: &quot;12345&quot;
+  },
+  &quot;messageId&quot;: &quot;1&quot;
+}
+</pre></div>
+</div>
+<p><strong>Atributos</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agendamento-id</td>
+<td>Identificação do agendamento no Catix</td>
+</tr>
+<tr class="row-odd"><td>agendamento-destino-tipo</td>
+<td>Tipo do destino no Catix, atualmente o único possível é <code class="docutils literal"><span class="pre">Agente</span></code></td>
+</tr>
+<tr class="row-even"><td>agendamento-destino-tipo-id</td>
+<td>Identificação no Catix do destino.</td>
+</tr>
+<tr class="row-odd"><td>agendamento-cod-referencia</td>
+<td>Código de referencia que pode ser fornecido na criação do agendamento, para ser usado no
+retorno para identificar a quem pertence o agendamento.</td>
+</tr>
+<tr class="row-even"><td>contato-id</td>
+<td>Id do contato do mailing, esse atributo e os outros relacionados ao contato e numero de contato
+só serão devolvidos caso o agendamento seja de um contato do mailing.</td>
+</tr>
+<tr class="row-odd"><td>numero-agendamento-id</td>
+<td>ID do número discado, esse atributo só será devolvido caso não seja um contato do mailing.</td>
+</tr>
+<tr class="row-even"><td>numero-agendamento</td>
+<td>Número discador caso não seja um contato do mailing.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msg_erro.html" class="btn btn-neutral float-right" title="Mensagem de Erro" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="comandos.html" class="btn btn-neutral" title="Lista de comandos" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Kennedy Oliveira.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

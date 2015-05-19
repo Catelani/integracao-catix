@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Informações de Conexão &mdash; Integração Catix 1.1.0 documentação</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Integração Catix 1.1.0 documentação" href="index.html"/>
+        <link rel="next" title="Informações dos comandos" href="info_comandos.html"/>
+        <link rel="prev" title="Change Log" href="changelog.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Integração Catix
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-1-0-atual">Versão 1.1.0 (Atual)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-internas">Melhorias internas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-eventos">Melhorias nos eventos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-comandos">Melhorias nos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-comandos">Novos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-eventos">Novos eventos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novas-mensagens-de-erro">Novas mensagens de erro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-0-0">Versão 1.0.0</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Informações Basicas</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Informações de Conexão</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#formato-das-mensagens">Formato das mensagens</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#descricao-dos-campos">Descrição dos campos</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Comandos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="info_comandos.html">Informações dos comandos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comandos.html">Lista de comandos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#login-single-user">LOGIN_SINGLE_USER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#login-multi-user">LOGIN_MULTI_USER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#agente-logar">AGENTE_LOGAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#agente-deslogar">AGENTE_DESLOGAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#discar">DISCAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#rediscar">REDISCAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#pausar">PAUSAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#status-agente">STATUS_AGENTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#desligar-chamada">DESLIGAR_CHAMADA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-tipos-pausa">BUSCAR_TIPOS_PAUSA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-ramais">BUSCAR_RAMAIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#transferir">TRANSFERIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-opcoes-transferencia">BUSCAR_OPCOES_TRANSFERENCIA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#sair">SAIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#status-servidor">STATUS_SERVIDOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#informacao-pausa">INFORMACAO_PAUSA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-filas">BUSCAR_FILAS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-estrategias-chamada">BUSCAR_ESTRATEGIAS_CHAMADA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-campanhas">BUSCAR_CAMPANHAS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#importar-mailing">IMPORTAR_MAILING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#resultado-agendamento">RESULTADO_AGENDAMENTO</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Eventos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="eventos.html">Lista de Eventos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-login">AGENT_LOGIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-logoff">AGENT_LOGOFF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-paused">AGENT_PAUSED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-unpaused">AGENT_UNPAUSED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-complete">AGENT_COMPLETE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#dialing">DIALING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#answer">ANSWER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#hangup">HANGUP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-received-dialer-call">AGENT_RECEIVED_DIALER_CALL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#scheduled-call-coming">SCHEDULED_CALL_COMING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#scheduled-call-asnwer">SCHEDULED_CALL_ASNWER</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Erros</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msg_erro.html">Mensagem de Erro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="erros.html">Lista de Erros</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Integração Catix</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Informações de Conexão</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/basico.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="informacoes-de-conexao">
+<h1>Informações de Conexão<a class="headerlink" href="#informacoes-de-conexao" title="Link permanente para este título">¶</a></h1>
+<p>Tecnologia usada: <code class="docutils literal"><span class="pre">Socket</span></code>.</p>
+<p>Troca de mensagens no formato JSON. Ex:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span><span class="s2">&quot;tipo&quot;</span><span class="o">:</span><span class="s2">&quot;ACAO&quot;</span><span class="p">,</span><span class="s2">&quot;comando&quot;</span><span class="o">:</span><span class="s2">&quot;DISCAR&quot;</span><span class="p">,</span><span class="s2">&quot;numeroDiscado&quot;</span><span class="o">:</span><span class="s2">&quot;099123456&quot;</span><span class="p">,</span><span class="s2">&quot;agente&quot;</span><span class="o">:</span><span class="s2">&quot;12&quot;</span><span class="p">,</span><span class="s2">&quot;messageId&quot;</span><span class="o">:</span><span class="s2">&quot;1&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>As mensagens são em uma linha, com uma quebra de linha ao final.</p>
+<p>Porta de conexão configurável pelo sistema Catix, verificar com o suporte da Catelani caso precise trocar a porta ou usar uma especifica. O procedimento é rápido.</p>
+<p>A quantidade de conexões que o sistema suporta varia de acordo com o hardware do servidor.</p>
+<p>A comunicação ocorre na forma de troca de mensagens do tipo <code class="docutils literal"><span class="pre">Comando</span></code> e <code class="docutils literal"><span class="pre">Eventos</span></code>. Os comandos são enviados pelo cliente ao servidor para executar uma ação e responde o cliente na forma de uma <code class="docutils literal"><span class="pre">Notificação</span></code>, e os eventos são enviados do servidor para os clientes de acordo com o que está acontecendo, e não precisam de uma ação para serem enviados.</p>
+<p>A integração suporta basicamente dois formatos de comunicação: um em que apenas uma conexão é aberta para o servidor, e todas as mensagens são enviadas com as identificações dos agentes - ideal para aplicações webs, chamada de <code class="docutils literal"><span class="pre">LOGIN_MULTI_USER</span></code>; e outra que é uma conexão por agente, onde o agente se identifica no momento de conectar e não é necessário enviar a identificação nos comandos após o login - ideal para aplicações desktop, chamada de <code class="docutils literal"><span class="pre">LOGIN_SINGLE_USER</span></code>.Ver mais informações na lista de comandos nas opções de login.</p>
+</div>
+<div class="section" id="formato-das-mensagens">
+<h1>Formato das mensagens<a class="headerlink" href="#formato-das-mensagens" title="Link permanente para este título">¶</a></h1>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+     <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;LOGAR_SINGLE_USER&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;numeroDiscado&quot;</span><span class="o">:</span> <span class="s2">&quot;12345678&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;destino&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;idDestino&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;erroCod&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;usuario&quot;</span><span class="o">:</span> <span class="s2">&quot;zupao&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;senha&quot;</span><span class="o">:</span> <span class="s2">&quot;123456&quot;</span>
+      <span class="p">},</span>
+     <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Atenção</p>
+<p class="last">Os campos são requeridos ou não, dependendo da ação que estiver sendo executada, consule a lista de ações para verificar.</p>
+</div>
+<div class="section" id="descricao-dos-campos">
+<h2>Descrição dos campos<a class="headerlink" href="#descricao-dos-campos" title="Link permanente para este título">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Tipo</td>
+<td>Tipo da mensagem. <code class="docutils literal"><span class="pre">ACAO</span></code>, <code class="docutils literal"><span class="pre">NOTIFICACAO</span></code>, <code class="docutils literal"><span class="pre">ERRO</span></code>, <code class="docutils literal"><span class="pre">KEEP_ALIVE</span></code> e <code class="docutils literal"><span class="pre">EVENT</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>Comando</td>
+<td>Usado em conjunto com o tipo ACAO, descreve a ação a ser executado.</td>
+</tr>
+<tr class="row-even"><td>Agente</td>
+<td>Usado no modo <code class="docutils literal"><span class="pre">MULTI_LOGIN</span></code> para informar a qual usuário a ação deve ser enviada.</td>
+</tr>
+<tr class="row-odd"><td>NumeroDiscado</td>
+<td>Usado na ação de discar, informa o numero que deve ser discado</td>
+</tr>
+<tr class="row-even"><td>Informacao</td>
+<td>Mostra informações variadas dependendo da mensagem, em respostas normalmente informa ‘OK’ ou a descrição do erro e em
+eventos alguma informação relacionada ao evento.</td>
+</tr>
+<tr class="row-odd"><td>Destino</td>
+<td>Tipo de destino a ser transferido, valores suportados no momento: <code class="docutils literal"><span class="pre">Ramal</span></code>.</td>
+</tr>
+<tr class="row-even"><td>idDestino</td>
+<td>ID do Catix do destino, utilizado na transferência, pode ser recuperado através da ação <code class="docutils literal"><span class="pre">BUSCAR_OPCOES_TRANSFERENCIA</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>ErroCod</td>
+<td>Código de erro, enviado apenas do servidor para o cliente quando ocorre algum problema ao processar a solicitação.</td>
+</tr>
+<tr class="row-even"><td>Atributos</td>
+<td>Parâmetros no formato de Mapa, Chave -&gt; Valor, são utilizados por diversos comandos e notificações para informações
+variadas, consulta a lista de comandos e eventos para verificar quais e quando são aplicáveis.</td>
+</tr>
+<tr class="row-odd"><td>MessageId</td>
+<td>Identificador da mensagem, o servidor devolve as resposta para uma mensagem com o id igual ao da mensagem que originou,
+usado para identificar as resposta em um ambiente multi thread.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="info_comandos.html" class="btn btn-neutral float-right" title="Informações dos comandos" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="changelog.html" class="btn btn-neutral" title="Change Log" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Kennedy Oliveira.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Change Log &mdash; Integração Catix 1.1.0 documentação</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Integração Catix 1.1.0 documentação" href="index.html"/>
+        <link rel="next" title="Informações de Conexão" href="basico.html"/>
+        <link rel="prev" title="Integração Catix" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Integração Catix
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#versao-1-1-0-atual">Versão 1.1.0 (Atual)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#melhorias-internas">Melhorias internas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#melhorias-nos-eventos">Melhorias nos eventos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#melhorias-nos-comandos">Melhorias nos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#novos-comandos">Novos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#novos-eventos">Novos eventos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#novas-mensagens-de-erro">Novas mensagens de erro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#versao-1-0-0">Versão 1.0.0</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Informações Basicas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basico.html">Informações de Conexão</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basico.html#formato-das-mensagens">Formato das mensagens</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basico.html#descricao-dos-campos">Descrição dos campos</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Comandos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="info_comandos.html">Informações dos comandos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comandos.html">Lista de comandos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#login-single-user">LOGIN_SINGLE_USER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#login-multi-user">LOGIN_MULTI_USER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#agente-logar">AGENTE_LOGAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#agente-deslogar">AGENTE_DESLOGAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#discar">DISCAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#rediscar">REDISCAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#pausar">PAUSAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#status-agente">STATUS_AGENTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#desligar-chamada">DESLIGAR_CHAMADA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-tipos-pausa">BUSCAR_TIPOS_PAUSA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-ramais">BUSCAR_RAMAIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#transferir">TRANSFERIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-opcoes-transferencia">BUSCAR_OPCOES_TRANSFERENCIA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#sair">SAIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#status-servidor">STATUS_SERVIDOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#informacao-pausa">INFORMACAO_PAUSA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-filas">BUSCAR_FILAS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-estrategias-chamada">BUSCAR_ESTRATEGIAS_CHAMADA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-campanhas">BUSCAR_CAMPANHAS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#importar-mailing">IMPORTAR_MAILING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#resultado-agendamento">RESULTADO_AGENDAMENTO</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Eventos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="eventos.html">Lista de Eventos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-login">AGENT_LOGIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-logoff">AGENT_LOGOFF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-paused">AGENT_PAUSED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-unpaused">AGENT_UNPAUSED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-complete">AGENT_COMPLETE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#dialing">DIALING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#answer">ANSWER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#hangup">HANGUP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-received-dialer-call">AGENT_RECEIVED_DIALER_CALL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#scheduled-call-coming">SCHEDULED_CALL_COMING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#scheduled-call-asnwer">SCHEDULED_CALL_ASNWER</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Erros</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msg_erro.html">Mensagem de Erro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="erros.html">Lista de Erros</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Integração Catix</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Change Log</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/changelog.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="change-log">
+<h1>Change Log<a class="headerlink" href="#change-log" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="versao-1-1-0-atual">
+<h2>Versão 1.1.0 (Atual)<a class="headerlink" href="#versao-1-1-0-atual" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="melhorias-internas">
+<h3>Melhorias internas<a class="headerlink" href="#melhorias-internas" title="Link permanente para este título">¶</a></h3>
+<ul class="simple">
+<li>Adicionando validações de dependências (Asterisk Manager, Agente Online, Transações).</li>
+<li>Mensagens mais informativas sobre as validações e erros.</li>
+<li>Caso tentar se logar com o agente e ele já estiver logado, vai retornar uma mensagem de erro avisando que o agente já está logado, <code class="docutils literal"><span class="pre">error</span> <span class="pre">cod</span> <span class="pre">1007</span></code>.</li>
+<li>Logs dos usuarios conectando.</li>
+</ul>
+</div>
+<div class="section" id="melhorias-nos-eventos">
+<h3>Melhorias nos eventos<a class="headerlink" href="#melhorias-nos-eventos" title="Link permanente para este título">¶</a></h3>
+<ul class="simple">
+<li>Adicionado o atributo <code class="docutils literal"><span class="pre">ramal-agente</span></code> no evento <code class="docutils literal"><span class="pre">AGENT_LOGIN</span></code>, contém o ramal que o agente efetuou login, lembrando que é o ramal físico e não o alias para o mesmo.</li>
+<li><code class="docutils literal"><span class="pre">AGENTE_UNPAUSED</span></code>, Devolve o tempo total em segundos que o agente ficou naquela pausa.</li>
+</ul>
+</div>
+<div class="section" id="melhorias-nos-comandos">
+<h3>Melhorias nos comandos<a class="headerlink" href="#melhorias-nos-comandos" title="Link permanente para este título">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">DISCAR</span></code>, Caso o parametro numeroDiscado for inválido retorno um erro (error cod 1001).</li>
+</ul>
+</div>
+<div class="section" id="novos-comandos">
+<h3>Novos comandos<a class="headerlink" href="#novos-comandos" title="Link permanente para este título">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">STATUS_SERVIDOR</span></code>, retorna informações sobre o servidor como versão, quantidade de usuários conectados, tempo que o servidor está online, etc.</li>
+<li><code class="docutils literal"><span class="pre">INFORMACAO_PAUSA</span></code>, Retorna as informações da pausa do agente.</li>
+<li><code class="docutils literal"><span class="pre">BUSCAR_FILAS</span></code>, Lista as filas cadastradas no Catix.</li>
+<li><code class="docutils literal"><span class="pre">BUSCAR_ESTRATEGIAS_CHAMADA</span></code>, Lista as estratégias de chamada cadastradas no Catix.</li>
+<li><code class="docutils literal"><span class="pre">BUSCAR_CAMPANHAS</span></code>, Lista as campanhas cadastradas no Catix.</li>
+<li><code class="docutils literal"><span class="pre">CAMPANHA_CRIAR</span></code>, Cria uma nova campanha.</li>
+<li><code class="docutils literal"><span class="pre">CAMPANHA_INICIAR</span></code>, Inicia uma campanha já existente no Catix.</li>
+<li><code class="docutils literal"><span class="pre">CAMPANHA_PAUSAR</span></code>, Pausa uma campanha em execução no Catix.</li>
+<li><code class="docutils literal"><span class="pre">IMPORTAR_MAILING</span></code>, Cria um novo mailing ou adiciona contatos a um mailing já existente.</li>
+<li><code class="docutils literal"><span class="pre">RESULTADO_CONTATO_DISCADOR</span></code>, Informa o Catix do resultado de uma ligação do discador pelo agente, Efetivo e Eficaz.</li>
+<li><code class="docutils literal"><span class="pre">RESULTADO_AGENDAMENTO</span></code>, Informa o Catix do resultado de um agendamento</li>
+</ul>
+</div>
+<div class="section" id="novos-eventos">
+<h3>Novos eventos<a class="headerlink" href="#novos-eventos" title="Link permanente para este título">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">SCHEDULED_CALL_COMING</span></code>, notificação de que uma ligação agendada está prestes a ser iniciada dentro de x tempo. (x tempo configurado no Catix)</li>
+<li><code class="docutils literal"><span class="pre">SCHEDULED_CALL_ANSWER</span></code>, notificação de que um agente atendeu uma ligação agendada.</li>
+</ul>
+</div>
+<div class="section" id="novas-mensagens-de-erro">
+<h3>Novas mensagens de erro<a class="headerlink" href="#novas-mensagens-de-erro" title="Link permanente para este título">¶</a></h3>
+<div class="admonition tip">
+<p class="first admonition-title">Dica</p>
+<p class="last">Consulte a <a class="reference internal" href="erros.html#lista-erros"><span>Lista de Erros</span></a> para saber mais.</p>
+</div>
+<ul class="simple">
+<li>1008</li>
+<li>1009</li>
+<li>1010</li>
+<li>3000</li>
+<li>3001</li>
+<li>3002</li>
+<li>3003</li>
+</ul>
+</div>
+</div>
+<div class="section" id="versao-1-0-0">
+<h2>Versão 1.0.0<a class="headerlink" href="#versao-1-0-0" title="Link permanente para este título">¶</a></h2>
+<p><em>Release inicial</em></p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="basico.html" class="btn btn-neutral float-right" title="Informações de Conexão" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Integração Catix" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Kennedy Oliveira.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

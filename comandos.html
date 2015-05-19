@@ -1,0 +1,1182 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lista de comandos &mdash; Integração Catix 1.1.0 documentação</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Integração Catix 1.1.0 documentação" href="index.html"/>
+        <link rel="next" title="Lista de Eventos" href="eventos.html"/>
+        <link rel="prev" title="Informações dos comandos" href="info_comandos.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Integração Catix
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-1-0-atual">Versão 1.1.0 (Atual)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-internas">Melhorias internas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-eventos">Melhorias nos eventos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-comandos">Melhorias nos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-comandos">Novos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-eventos">Novos eventos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novas-mensagens-de-erro">Novas mensagens de erro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-0-0">Versão 1.0.0</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Informações Basicas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basico.html">Informações de Conexão</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basico.html#formato-das-mensagens">Formato das mensagens</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basico.html#descricao-dos-campos">Descrição dos campos</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Comandos</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="info_comandos.html">Informações dos comandos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Lista de comandos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#login-single-user">LOGIN_SINGLE_USER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#login-multi-user">LOGIN_MULTI_USER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agente-logar">AGENTE_LOGAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agente-deslogar">AGENTE_DESLOGAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#discar">DISCAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rediscar">REDISCAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pausar">PAUSAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#status-agente">STATUS_AGENTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#desligar-chamada">DESLIGAR_CHAMADA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buscar-tipos-pausa">BUSCAR_TIPOS_PAUSA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buscar-ramais">BUSCAR_RAMAIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transferir">TRANSFERIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buscar-opcoes-transferencia">BUSCAR_OPCOES_TRANSFERENCIA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sair">SAIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#status-servidor">STATUS_SERVIDOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#informacao-pausa">INFORMACAO_PAUSA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buscar-filas">BUSCAR_FILAS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buscar-estrategias-chamada">BUSCAR_ESTRATEGIAS_CHAMADA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buscar-campanhas">BUSCAR_CAMPANHAS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#importar-mailing">IMPORTAR_MAILING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resultado-agendamento">RESULTADO_AGENDAMENTO</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Eventos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="eventos.html">Lista de Eventos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-login">AGENT_LOGIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-logoff">AGENT_LOGOFF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-paused">AGENT_PAUSED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-unpaused">AGENT_UNPAUSED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-complete">AGENT_COMPLETE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#dialing">DIALING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#answer">ANSWER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#hangup">HANGUP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#agent-received-dialer-call">AGENT_RECEIVED_DIALER_CALL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#scheduled-call-coming">SCHEDULED_CALL_COMING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#scheduled-call-asnwer">SCHEDULED_CALL_ASNWER</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Erros</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msg_erro.html">Mensagem de Erro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="erros.html">Lista de Erros</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Integração Catix</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Lista de comandos</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/comandos.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="lista-de-comandos">
+<h1>Lista de comandos<a class="headerlink" href="#lista-de-comandos" title="Link permanente para este título">¶</a></h1>
+<div class="admonition warning">
+<p class="first admonition-title">Aviso</p>
+<p class="last">O usuário e a senha necessário para autenticação não é o usuário e a senha do ramal nem dos agentes, é um usuário especifico para a integração, por favor, solicite a Catelani o cadastro de um.</p>
+</div>
+<div class="section" id="login-single-user">
+<h2>LOGIN_SINGLE_USER<a class="headerlink" href="#login-single-user" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> O modo Single User significa que apenas um agente vai utilizar aquela conexão. No momento do login será fornecido a qual agente pertence essa conexão e não será mais necessário informar esse agente nos comandos seguintes.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;LOGAR_SINGLE_USER&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;usuario&quot;</span><span class="o">:</span> <span class="s2">&quot;zupao&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;senha&quot;</span><span class="o">:</span> <span class="s2">&quot;123456&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do agente no Catix, vai relacioná-lo aquela conexão.</td>
+</tr>
+<tr class="row-odd"><td>atributos-usuario</td>
+<td>Usuário configurado no Catix para autenticação no servidor de integração.</td>
+</tr>
+<tr class="row-even"><td>atributos-senha</td>
+<td>Senha configurada para o usuário.</td>
+</tr>
+<tr class="row-odd"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="login-multi-user">
+<h2>LOGIN_MULTI_USER<a class="headerlink" href="#login-multi-user" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> O modo Multi User significa que vários agentes vão utilizar aquela conexão. No momento do login não é necessário informar o agente, porém em todos os comandos seguintes se faz necessário.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;LOGAR_MULTI_USER&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;usuario&quot;</span><span class="o">:</span> <span class="s2">&quot;zupao&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;senha&quot;</span><span class="o">:</span> <span class="s2">&quot;123456&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>atributos-usuario</td>
+<td>Usuário configurado no Catix para autenticação no servidor de integração.</td>
+</tr>
+<tr class="row-odd"><td>atributos-senha</td>
+<td>Senha do usuario.</td>
+</tr>
+<tr class="row-even"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="agente-logar">
+<h2>AGENTE_LOGAR<a class="headerlink" href="#agente-logar" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Envia uma solicitação de login para o agente, o ramal do agente deve estar disponível pois ele receberá uma ligação que solicitará a senha dele, caso tiver uma configurada para o agente, e após isso ele já estará logado.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;AGENTE_LOGAR&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;login-ramal&quot;</span><span class="o">:</span> <span class="s2">&quot;100&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do agente no Catix.</td>
+</tr>
+<tr class="row-odd"><td>atributos-login-ramal</td>
+<td>Ramal no qual o agente vai fazer login.</td>
+</tr>
+<tr class="row-even"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="agente-deslogar">
+<h2>AGENTE_DESLOGAR<a class="headerlink" href="#agente-deslogar" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Envia uma solicitação de logoff. O agente saíra do modo “logado como agente” e não estará mais apto a receber ligações do discador ou através do comando DISCAR.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;AGENTE_DESLOGAR&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do agente no Catix.</td>
+</tr>
+<tr class="row-odd"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="discar">
+<h2>DISCAR<a class="headerlink" href="#discar" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Envia uma solicitação de discagem ao servidor e direciona a chamada para o agente.</p>
+<div class="highlight-javascript"><div class="highlight"><pre>{
+ &quot;tipo&quot;: &quot;ACAO&quot;,
+  &quot;comando&quot;: &quot;DISCAR&quot;,
+  &quot;numeroDiscado&quot;: &quot;099134567&quot;,
+  &quot;agente&quot;: “12”,
+  &quot;messageId&quot;: &quot;1&quot;
+}
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>numeroDiscado</td>
+<td>Número que o sistema vai discar, deve começar com o 0 caso seja um numero externo.</td>
+</tr>
+<tr class="row-odd"><td>agente</td>
+<td>ID do agente no Catix, que vai receber aquela ligação.</td>
+</tr>
+<tr class="row-even"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rediscar">
+<h2>REDISCAR<a class="headerlink" href="#rediscar" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Disca novamente para o último número que o agente discou.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;REDISCAR&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pausar">
+<h2>PAUSAR<a class="headerlink" href="#pausar" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Serve tanto para pausar quanto despausar o agente, controlado peo atributo <code class="docutils literal"><span class="pre">PAUSA-ACAO</span></code>.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;PAUSAR&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;pausa-id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;pausa-obs&quot;</span><span class="o">:</span> <span class="s2">&quot;Almoço&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pausa-acao&quot;</span><span class="o">:</span> <span class="s2">&quot;PAUSAR&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status-agente">
+<h2>STATUS_AGENTE<a class="headerlink" href="#status-agente" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Retorna algumas informações do status do agente como, status, tempo, numero discado, observações.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;STATUS_AGENTE&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do agente no Catix que tera seu status consultado.</td>
+</tr>
+<tr class="row-odd"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="desligar-chamada">
+<h2>DESLIGAR_CHAMADA<a class="headerlink" href="#desligar-chamada" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Desliga a chamada atual do agente.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;DESLIGAR_CHAMADA&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do agente no Catix que a chamada vai ser desligada.</td>
+</tr>
+<tr class="row-odd"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="buscar-tipos-pausa">
+<h2>BUSCAR_TIPOS_PAUSA<a class="headerlink" href="#buscar-tipos-pausa" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Lista as pausas disponíveis no sistema.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;BUSCAR_TIPOS_PAUSA&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+
+<span class="o">&gt;&gt;</span> <span class="nx">Retorno</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;pausas&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;Almoço&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;descricao&quot;</span><span class="o">:</span> <span class="s2">&quot;Horario de almoço&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;exigeObs&quot;</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;Outra tarefa&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;descricao&quot;</span><span class="o">:</span> <span class="s2">&quot;Atividade diferente do cargo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;exigeObs&quot;</span><span class="o">:</span> <span class="kc">true</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="buscar-ramais">
+<h2>BUSCAR_RAMAIS<a class="headerlink" href="#buscar-ramais" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Lista os ramais do sistema. Usado para disponibilizar para o agente em qual ramal o mesmo deseja efetuar login.</p>
+<div class="admonition important">
+<p class="first admonition-title">Importante</p>
+<div class="last line-block">
+<div class="line">Formato do ramal no campo <code class="docutils literal"><span class="pre">atributos</span></code> do retorno: <code class="docutils literal"><span class="pre">Alias</span> <span class="pre">do</span> <span class="pre">ramal:</span> <span class="pre">Nome</span> <span class="pre">do</span> <span class="pre">Ramal</span> <span class="pre">fisico</span></code>.</div>
+<div class="line">Estas informações são cadastradas no Catix.</div>
+</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;BUSCAR_RAMAIS&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+
+<span class="o">&gt;&gt;</span> <span class="nx">Retorno</span><span class="o">:</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;100&quot;</span><span class="o">:</span> <span class="s2">&quot;100&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;101&quot;</span><span class="o">:</span> <span class="s2">&quot;101&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;102&quot;</span><span class="o">:</span> <span class="s2">&quot;102&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;103&quot;</span><span class="o">:</span> <span class="s2">&quot;103&quot;</span><span class="p">,</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="transferir">
+<h2>TRANSFERIR<a class="headerlink" href="#transferir" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Faz a transferência da ligação atual do agente para o destino que ela informar. Os destinos possíveis são os retornados pelo comando <code class="docutils literal"><span class="pre">BUSCAR_OPCOES_TRANSFERENCIA</span></code>.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;TRANSFERIR&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;destino&quot;</span><span class="o">:</span> <span class="s2">&quot;Ramal&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;numeroDiscado&quot;</span><span class="o">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;idDestino&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campos</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>ID do Catix do agente que vai ter sua ligação transferida.</td>
+</tr>
+<tr class="row-odd"><td>destino</td>
+<td>Tipo do destino, no momento o sistema somente faz transferências para <code class="docutils literal"><span class="pre">Ramal</span></code>, mas é possível obter a lista de
+destinos disponíveis e suas opções através do comando <code class="docutils literal"><span class="pre">BUSCAR_OPCOES_TRANSFERENCIA</span></code>. Esse campo é opcional caso se
+use o <code class="docutils literal"><span class="pre">numeroDiscado</span></code>.</td>
+</tr>
+<tr class="row-even"><td>idDestino</td>
+<td>Id do destino a ser transferido, é usado em conjunto com o campo destino. <em>Ignorado quando o campo</em> <code class="docutils literal"><span class="pre">numeroDiscado</span></code>
+<em>for informado.</em></td>
+</tr>
+<tr class="row-odd"><td>numeroDiscado</td>
+<td>Número do ramal a ser transferido, caso este campo esteja preenchido, o campo destino e IdDestino serão ignorados.</td>
+</tr>
+<tr class="row-even"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Aviso</p>
+<p class="last">Na transferência temos duas opções: uma é informando o <code class="docutils literal"><span class="pre">destino</span></code> e o <code class="docutils literal"><span class="pre">idDestino</span></code> e a outra é passando o número do ramal no número discado.</p>
+</div>
+</div>
+<div class="section" id="buscar-opcoes-transferencia">
+<h2>BUSCAR_OPCOES_TRANSFERENCIA<a class="headerlink" href="#buscar-opcoes-transferencia" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Busca as opções de transferencia disponíveis no sistema.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;BUSCAR_OPCOES_TRANSFERENCIA&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+
+<span class="o">&gt;&gt;</span> <span class="nx">Retorno</span><span class="o">:</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;ramal&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;100&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;101&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;102&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;103&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;500&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;123&quot;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sair">
+<h2>SAIR<a class="headerlink" href="#sair" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Fecha a comunicação com o sistema.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;SAIR&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status-servidor">
+<h2>STATUS_SERVIDOR<a class="headerlink" href="#status-servidor" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Retorna informações sobre o servidor.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;STATUS_SERVIDOR&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+
+<span class="o">&gt;&gt;</span> <span class="nx">Retorno</span><span class="o">:</span>
+
+<span class="p">{</span>
+   <span class="s2">&quot;informacao&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;messageId&quot;</span><span class="o">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;atributos&quot;</span><span class="o">:</span><span class="p">{</span>
+      <span class="s2">&quot;usuarios-multi-user&quot;</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;requisicoes&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+      <span class="s2">&quot;acoes-executadas&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+      <span class="s2">&quot;tempo-rodando&quot;</span><span class="o">:</span><span class="s2">&quot;1 Minutos 36 Segundos 868 Milisegundos&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;total-usuarios&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+      <span class="s2">&quot;total-conexoes&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+      <span class="s2">&quot;data-inicializacao&quot;</span><span class="o">:</span><span class="s2">&quot;25/03/2015 10:16:21&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;versao&quot;</span><span class="o">:</span><span class="s2">&quot;1.1&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;usuarios-single-user&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+      <span class="s2">&quot;conexoes-recebidas&quot;</span><span class="o">:</span><span class="mi">1</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>tempo-rodando</td>
+<td>Tempo em que o servidor está rodando.</td>
+</tr>
+<tr class="row-odd"><td>acoes-executadas</td>
+<td>Quantidade de ações que o servidor já executou.</td>
+</tr>
+<tr class="row-even"><td>conexoes-recebidas</td>
+<td>Quantidade de conexões que o servidor já recebeu.</td>
+</tr>
+<tr class="row-odd"><td>requisicoes</td>
+<td>Quantidade de requisições que o servidor já recebeu.</td>
+</tr>
+<tr class="row-even"><td>data-inicializacao</td>
+<td>Data de inicialização do servidor.</td>
+</tr>
+<tr class="row-odd"><td>versao</td>
+<td>Versão atual do servidor.</td>
+</tr>
+<tr class="row-even"><td>usuarios-single-user</td>
+<td>Quantidade de usuarios SINGLE_USER logados.</td>
+</tr>
+<tr class="row-odd"><td>usuarios-multi-user</td>
+<td>Quantidade de usuarios MULTI_USER logados.</td>
+</tr>
+<tr class="row-even"><td>total-usuario</td>
+<td>Total de usuarios conectados no servidor.</td>
+</tr>
+<tr class="row-odd"><td>total-conexoes</td>
+<td>Total de conexões abertas com o servidor.</td>
+</tr>
+<tr class="row-even"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="informacao-pausa">
+<h2>INFORMACAO_PAUSA<a class="headerlink" href="#informacao-pausa" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Busca informações da pausa de um agente.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;STATUS_SERVIDOR&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+
+<span class="o">&gt;&gt;</span> <span class="nx">Retorno</span><span class="o">:</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;id-pausa&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pausa&quot;</span><span class="o">:</span> <span class="s2">&quot;Almoço&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;descricao&quot;</span><span class="o">:</span> <span class="s2">&quot;Pausa para o almoço&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tempo-limite&quot;</span><span class="o">:</span> <span class="s2">&quot;60 minutos&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tempo-decorrido&quot;</span><span class="o">:</span> <span class="s2">&quot;500&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;obs&quot;</span><span class="o">:</span> <span class="s2">&quot;Vou demorar mais no almoço pois vou ao banco&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>id-pausa</td>
+<td>Id da pausa no Catix.</td>
+</tr>
+<tr class="row-odd"><td>pausa</td>
+<td>Nome da pausa no Catix.</td>
+</tr>
+<tr class="row-even"><td>descricao</td>
+<td>Descrição da pausa no Catix.</td>
+</tr>
+<tr class="row-odd"><td>tempo-limite</td>
+<td>Tempo em minutos da pausa no Catix, sempre no formato X minutos, onde x é um inteiro.</td>
+</tr>
+<tr class="row-even"><td>tempo-decorrido</td>
+<td>Inteiro representando o tempo em segundos decorrido desde que o agente pausou.</td>
+</tr>
+<tr class="row-odd"><td>obs</td>
+<td>Observação informada pelo agente na hora de pausar.</td>
+</tr>
+<tr class="row-even"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="buscar-filas">
+<h2>BUSCAR_FILAS<a class="headerlink" href="#buscar-filas" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Busca as filas disponíveis no Catix.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;BUSCAR_FILAS&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+
+<span class="o">&gt;&gt;</span> <span class="nx">Retorno</span><span class="o">:</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;filas&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">154</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;RECEPCAO&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tipoFila&quot;</span><span class="o">:</span> <span class="s2">&quot;Ramal&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">155</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;COBRANCA_GERAL&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tipoFila&quot;</span><span class="o">:</span> <span class="s2">&quot;Agente&quot;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>filas</td>
+<td>Array com as filas do sistema.</td>
+</tr>
+<tr class="row-odd"><td>id</td>
+<td>Id da fila no Catix.</td>
+</tr>
+<tr class="row-even"><td>nome</td>
+<td>Nome da fila no Catix.</td>
+</tr>
+<tr class="row-odd"><td>tipoFila</td>
+<td>Tipo da fila no Catix.</td>
+</tr>
+<tr class="row-even"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="buscar-estrategias-chamada">
+<h2>BUSCAR_ESTRATEGIAS_CHAMADA<a class="headerlink" href="#buscar-estrategias-chamada" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Busca as estratégias de chamada cadastradas no Catix.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;BUSCAR_ESTRATEGIAS_CHAMADA&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+
+<span class="o">&gt;&gt;</span> <span class="nx">Retorno</span><span class="o">:</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;estrategias&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;Teste&quot;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descricao</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>estrategias</td>
+<td>Array com as estratégias do sistema.</td>
+</tr>
+<tr class="row-odd"><td>id</td>
+<td>Id da estratégia no Catix.</td>
+</tr>
+<tr class="row-even"><td>nome</td>
+<td>Nome da estratégia no Catix.</td>
+</tr>
+<tr class="row-odd"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="buscar-campanhas">
+<h2>BUSCAR_CAMPANHAS<a class="headerlink" href="#buscar-campanhas" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Busca as campanhas cadastradas no Catix.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;BUSCAR_CAMPANHAS&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+
+<span class="o">&gt;&gt;</span> <span class="nx">Retorno</span><span class="o">:</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;campanhas&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;teste&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;Finalizada&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;destinoTipo&quot;</span><span class="o">:</span> <span class="s2">&quot;Fila&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;destino&quot;</span><span class="o">:</span> <span class="s2">&quot;151&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;teste7&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;Pausada&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;destinoTipo&quot;</span><span class="o">:</span> <span class="s2">&quot;Fila&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;destino&quot;</span><span class="o">:</span> <span class="s2">&quot;151&quot;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>campanhas</td>
+<td>Array com as campanhas do sistema.</td>
+</tr>
+<tr class="row-odd"><td>id</td>
+<td>Id da campanha no Catix.</td>
+</tr>
+<tr class="row-even"><td>nome</td>
+<td>Nome da campanha no Catix.</td>
+</tr>
+<tr class="row-odd"><td>status</td>
+<td>Status da campanha no Catix, que pode ser: Ativo, Finalizada, Pausada</td>
+</tr>
+<tr class="row-even"><td>destinoTipo</td>
+<td>Tipo do destino no Catix, Fila, Ramal, etc…</td>
+</tr>
+<tr class="row-odd"><td>destino</td>
+<td>ID do destino no Catix.</td>
+</tr>
+<tr class="row-even"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="importar-mailing">
+<h2>IMPORTAR_MAILING<a class="headerlink" href="#importar-mailing" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Importa um mailing novo, ou adiciona novos contatos a um mailing já existente.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;IMPORTAR_MAILING&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;mailing&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;idMailing&quot;</span><span class="o">:</span> <span class="mi">54</span><span class="p">,</span>
+    <span class="s2">&quot;nmNome&quot;</span><span class="o">:</span> <span class="s2">&quot;Mailing Teste&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dsDescricao&quot;</span><span class="o">:</span> <span class="s2">&quot;Importando mailing via integração&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;contatos&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;nmNome&quot;</span><span class="o">:</span> <span class="s2">&quot;Contato 1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dsRgIe&quot;</span><span class="o">:</span> <span class="s2">&quot;1245645678&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dsCpfCnpj&quot;</span><span class="o">:</span> <span class="s2">&quot;40002812345&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dsEndereco&quot;</span><span class="o">:</span> <span class="s2">&quot;Rua teste&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cdContrato&quot;</span><span class="o">:</span> <span class="s2">&quot;abc123&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;numerosContatos&quot;</span><span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">&quot;cfNumero&quot;</span><span class="o">:</span> <span class="s2">&quot;17991351234&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;prioridade&quot;</span><span class="o">:</span> <span class="mi">1</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;agendamentos&quot;</span><span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;01/01/2012 08:00:00&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&quot;idUsuario&quot;</span><span class="o">:</span> <span class="mi">14</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;numerosPrioritarios&quot;</span><span class="o">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+                <span class="s2">&quot;cfNumero&quot;</span><span class="o">:</span> <span class="s2">&quot;17991351234&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;prioridade&quot;</span><span class="o">:</span> <span class="mi">1</span>
+              <span class="p">}</span>
+            <span class="p">]</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Importante</p>
+<p class="last">O campo <code class="docutils literal"><span class="pre">mailing</span></code> é um objeto dentro da mensagem e não um atributo.</p>
+</div>
+<p>Exemplo de Retorno:</p>
+<div class="highlight-javascript"><div class="highlight"><pre>{
+  &quot;tipo&quot;: &quot;NOTIFICACAO&quot;,
+  &quot;informacao&quot;: &quot;OK&quot;,
+  &quot;messageId&quot;: &quot;1&quot;,
+  &quot;atributos&quot;: {
+    &quot;mailing-id&quot;: 54,
+    &quot;mailing-total-contatos&quot;: 13,
+    &quot;mailing-total-contatos-adicionados&quot;: 1,
+    &quot;mailing-total-numeros&quot;: 25,
+    &quot;mailing-total-numeros-adicionados&quot;: 1,
+    &quot;mailing-total-agendamentos&quot;: 13,
+    “mailing-total-agendamentos-adicionados&quot;: 1
+  }
+}
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="83%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agente</td>
+<td>Usuário que criou a campanha, não é necessário informar caso esteja usando o tipo de conexão <code class="docutils literal"><span class="pre">SINGLE_USER</span></code>. Esse
+parâmetro é apenas para fins de log.</td>
+</tr>
+<tr class="row-odd"><td>campanha-descricao</td>
+<td>Descrição da campanha.</td>
+</tr>
+<tr class="row-even"><td>campanha-data-inicial</td>
+<td>Data inicial da campanha no formato <code class="docutils literal"><span class="pre">dd/MM/yyyy</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>campanha-data-final</td>
+<td>Data final da campanha no formato <code class="docutils literal"><span class="pre">dd/MM/yyyy</span></code>.</td>
+</tr>
+<tr class="row-even"><td>campanha-hora-inicial</td>
+<td>Horário de inicio da campanha no formato <code class="docutils literal"><span class="pre">hh:mm:ss</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>campanha-hora-final</td>
+<td>Horário de fim da campanha no formato <code class="docutils literal"><span class="pre">hh:mm:ss</span></code>.</td>
+</tr>
+<tr class="row-even"><td>campanha-dias-semana</td>
+<td>Dias da semana que a campanha vai executar no formato curto respeitando maiúsculas e minúsculas separados por virgula.
+Opções: <code class="docutils literal"><span class="pre">Seg</span></code>, <code class="docutils literal"><span class="pre">Ter</span></code>, <code class="docutils literal"><span class="pre">Qua</span></code>, <code class="docutils literal"><span class="pre">Qui</span></code>, <code class="docutils literal"><span class="pre">Sex</span></code>, <code class="docutils literal"><span class="pre">Sab</span></code>, <code class="docutils literal"><span class="pre">Dom</span></code></td>
+</tr>
+<tr class="row-odd"><td>campanha-estrategia-id</td>
+<td>ID da estratégia que será usada, deve ser uma previamente cadastrada no Catix.</td>
+</tr>
+<tr class="row-even"><td>campanha-destino</td>
+<td>Tipo do destino da campanha, atualmente o sistema suporta apenas <code class="docutils literal"><span class="pre">Fila</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>campanha-destino-id</td>
+<td>ID do destino, como o sistema atualmente só suporta fila é o ID da fila.</td>
+</tr>
+<tr class="row-even"><td>campanha-mailing-id</td>
+<td>ID do mailing no Catix a ser usado com essa campanha.</td>
+</tr>
+<tr class="row-odd"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="resultado-agendamento">
+<h2>RESULTADO_AGENDAMENTO<a class="headerlink" href="#resultado-agendamento" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Informa o Catix do resultado de um agendamento.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;RESULTADO_AGENDAMENTO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;agendamento-id&quot;</span><span class="o">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-efetivo&quot;</span><span class="o">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-eficaz&quot;</span><span class="o">:</span> <span class="s2">&quot;true&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agendamento-id</td>
+<td>ID do agendamento no Catix que tera seu status atualizado.</td>
+</tr>
+<tr class="row-odd"><td>agendamento-efetivo</td>
+<td>Flag (true, false, Sim, Nao) informa se o agendamento foi efetivo.</td>
+</tr>
+<tr class="row-even"><td>agendamento-eficaz</td>
+<td>Flag (true, false, Sim, Nao) informa se o agendamento foi eficaz.</td>
+</tr>
+<tr class="row-odd"><td>messageId</td>
+<td>Identificação da mensagem que será retornada junto com a resposta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="eventos.html" class="btn btn-neutral float-right" title="Lista de Eventos" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="info_comandos.html" class="btn btn-neutral" title="Informações dos comandos" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Kennedy Oliveira.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
