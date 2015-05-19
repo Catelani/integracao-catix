@@ -124,7 +124,7 @@ DISCAR
      "tipo": "ACAO",
       "comando": "DISCAR",
       "numeroDiscado": "099134567",
-      "agente": “12”,
+      "agente": "12",
       "messageId": "1"
     }
 
