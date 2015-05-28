@@ -181,8 +181,108 @@ STATUS_AGENTE
     {
      "tipo": "ACAO",
       "comando": "STATUS_AGENTE",
-      "agente": "12",
+      "agente": "13",
       "messageId": "1"
+    }
+
+Exemplos de retornos:
+
+.. code-block:: javascript
+
+    > Agente somente logado
+
+    {
+	  "tipo": "NOTIFICACAO",
+	  "informacao": "OK",
+	  "atributos": {
+	    "obs": "-",
+	    "tempo": "-",
+	    "nome": "Agente 200",
+	    "ramal_fisico": "200",
+	    "idAgente": "13",
+	    "numero_discado": "-",
+	    "status": "Disponível"
+	  }
+	}
+
+    > Agente discando
+
+    {
+      "tipo": "NOTIFICACAO",
+      "informacao": "OK",
+      "atributos": {
+        "obs": "<b>Tipo Ligação:</b><i> Sainte</i> <b>Tronco:</b><i> 170017</i> <b>Tipo de Número:</b><i> Móvel DDD</i> ",
+        "tempo": "00:00:05",
+        "nome": "Agente 200",
+        "ramal_fisico": "200",
+        "idAgente": "13",
+        "numero_discado": "(17) 99149-1234",
+        "status": "Discando"
+      }
+    }
+
+    > Agente em atedimento de ligação (Não Discador)
+
+    {
+      "tipo": "NOTIFICACAO",
+      "informacao": "OK",
+      "atributos": {
+        "obs": "<b>Tipo Ligação:</b><i> Sainte</i> <b>Tronco:</b><i> 170017</i> <b>Tipo de Número:</b><i> Móvel DDD</i> ",
+        "tempo": "00:00:01",
+        "nome": "Agente 200",
+        "ramal_fisico": "200",
+        "idAgente": "13",
+        "numero_discado": "(17) 99149-1234",
+        "status": "Em ligação"
+      }
+    }
+
+    > Agente em atendimento de ligação do discador
+
+    {
+      "tipo": "NOTIFICACAO",
+      "informacao": "OK",
+      "atributos": {
+        "obs": "<b>Tipo Ligação:</b><i> Preditivo</i> <b>Tronco:</b><i> 170017</i> <b>Tipo de Número:</b><i> Móvel DDD</i> <b>Campanha:</b><i> teste</i> <b>Contato: </b><i> Contato 75</i> ",
+        "tempo": "00:00:03",
+        "nome": "Agente 200",
+        "ramal_fisico": "200",
+        "idAgente": "13",
+        "numero_discado": "(17) 99149-1234",
+        "status": "Em ligação"
+      }
+    }
+
+    > Agente em pausa
+
+    {
+      "tipo": "NOTIFICACAO",
+      "informacao": "OK",
+      "atributos": {
+        "obs": "Motivo: Almoço - Obs: Observação que o usuário digitou",
+        "tempo": "00:15:07",
+        "nome": "Agente 200",
+        "ramal_fisico": "200",
+        "idAgente": "13",
+        "numero_discado": "-",
+        "status": "Pausado"
+      }
+    }
+
+    > Agente em pós atendimento
+
+    {
+      "tipo": "NOTIFICACAO",
+      "informacao": "OK",
+      "atributos": {
+        "obs": "Pausa automática para pós atendimento.",
+        "tempo": "00:00:08",
+        "nome": "Agente 200",
+        "ramal_fisico": "200",
+        "idAgente": "13",
+        "numero_discado": "-",
+        "status": "Pós Atendimento"
+      }
     }
 
 +-----------+--------------------------------------------------------------------+
