@@ -401,8 +401,106 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
   <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;STATUS_AGENTE&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;agente&quot;</span><span class="o">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
   <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Exemplos de retornos:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="o">&gt;</span> <span class="nx">Agente</span> <span class="nx">somente</span> <span class="nx">logado</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;obs&quot;</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tempo&quot;</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;Agente 200&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ramal_fisico&quot;</span><span class="o">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;idAgente&quot;</span><span class="o">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero_discado&quot;</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;Disponível&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">&gt;</span> <span class="nx">Agente</span> <span class="nx">discando</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;obs&quot;</span><span class="o">:</span> <span class="s2">&quot;&lt;b&gt;Tipo Ligação:&lt;/b&gt;&lt;i&gt; Sainte&lt;/i&gt; &lt;b&gt;Tronco:&lt;/b&gt;&lt;i&gt; 170017&lt;/i&gt; &lt;b&gt;Tipo de Número:&lt;/b&gt;&lt;i&gt; Móvel DDD&lt;/i&gt; &quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tempo&quot;</span><span class="o">:</span> <span class="s2">&quot;00:00:05&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;Agente 200&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ramal_fisico&quot;</span><span class="o">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;idAgente&quot;</span><span class="o">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero_discado&quot;</span><span class="o">:</span> <span class="s2">&quot;(17) 99149-1234&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;Discando&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">&gt;</span> <span class="nx">Agente</span> <span class="nx">em</span> <span class="nx">atedimento</span> <span class="nx">de</span> <span class="nx">ligação</span> <span class="p">(</span><span class="nx">Não</span> <span class="nx">Discador</span><span class="p">)</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;obs&quot;</span><span class="o">:</span> <span class="s2">&quot;&lt;b&gt;Tipo Ligação:&lt;/b&gt;&lt;i&gt; Sainte&lt;/i&gt; &lt;b&gt;Tronco:&lt;/b&gt;&lt;i&gt; 170017&lt;/i&gt; &lt;b&gt;Tipo de Número:&lt;/b&gt;&lt;i&gt; Móvel DDD&lt;/i&gt; &quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tempo&quot;</span><span class="o">:</span> <span class="s2">&quot;00:00:01&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;Agente 200&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ramal_fisico&quot;</span><span class="o">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;idAgente&quot;</span><span class="o">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero_discado&quot;</span><span class="o">:</span> <span class="s2">&quot;(17) 99149-1234&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;Em ligação&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">&gt;</span> <span class="nx">Agente</span> <span class="nx">em</span> <span class="nx">atendimento</span> <span class="nx">de</span> <span class="nx">ligação</span> <span class="k">do</span> <span class="nx">discador</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;obs&quot;</span><span class="o">:</span> <span class="s2">&quot;&lt;b&gt;Tipo Ligação:&lt;/b&gt;&lt;i&gt; Preditivo&lt;/i&gt; &lt;b&gt;Tronco:&lt;/b&gt;&lt;i&gt; 170017&lt;/i&gt; &lt;b&gt;Tipo de Número:&lt;/b&gt;&lt;i&gt; Móvel DDD&lt;/i&gt; &lt;b&gt;Campanha:&lt;/b&gt;&lt;i&gt; teste&lt;/i&gt; &lt;b&gt;Contato: &lt;/b&gt;&lt;i&gt; Contato 75&lt;/i&gt; &quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tempo&quot;</span><span class="o">:</span> <span class="s2">&quot;00:00:03&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;Agente 200&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ramal_fisico&quot;</span><span class="o">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;idAgente&quot;</span><span class="o">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero_discado&quot;</span><span class="o">:</span> <span class="s2">&quot;(17) 99149-1234&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;Em ligação&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">&gt;</span> <span class="nx">Agente</span> <span class="nx">em</span> <span class="nx">pausa</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;obs&quot;</span><span class="o">:</span> <span class="s2">&quot;Motivo: Almoço - Obs: Observação que o usuário digitou&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tempo&quot;</span><span class="o">:</span> <span class="s2">&quot;00:15:07&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;Agente 200&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ramal_fisico&quot;</span><span class="o">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;idAgente&quot;</span><span class="o">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero_discado&quot;</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;Pausado&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">&gt;</span> <span class="nx">Agente</span> <span class="nx">em</span> <span class="nx">pós</span> <span class="nx">atendimento</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;obs&quot;</span><span class="o">:</span> <span class="s2">&quot;Pausa automática para pós atendimento.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tempo&quot;</span><span class="o">:</span> <span class="s2">&quot;00:00:08&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nome&quot;</span><span class="o">:</span> <span class="s2">&quot;Agente 200&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ramal_fisico&quot;</span><span class="o">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;idAgente&quot;</span><span class="o">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero_discado&quot;</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;Pós Atendimento&quot;</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1185,7 +1283,7 @@ Opções: <code class="docutils literal"><span class="pre">Seg</span></code>, <c
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Kennedy Oliveira.
-      Última atualização em May 19, 2015.
+      Última atualização em May 28, 2015.
     </p>
   </div>
 
