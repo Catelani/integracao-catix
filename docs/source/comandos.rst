@@ -192,18 +192,18 @@ Exemplos de retornos:
     > Agente somente logado
 
     {
-	  "tipo": "NOTIFICACAO",
-	  "informacao": "OK",
-	  "atributos": {
-	    "obs": "-",
-	    "tempo": "-",
-	    "nome": "Agente 200",
-	    "ramal_fisico": "200",
-	    "idAgente": "13",
-	    "numero_discado": "-",
-	    "status": "Disponível"
-	  }
-	}
+      "tipo": "NOTIFICACAO",
+      "informacao": "OK",
+      "atributos": {
+        "obs": "-",
+        "tempo": "-",
+        "nome": "Agente 200",
+        "ramal_fisico": "200",
+        "idAgente": "13",
+        "numero_discado": "-",
+        "status": "Disponível"
+      }
+    }
 
     > Agente discando
 
