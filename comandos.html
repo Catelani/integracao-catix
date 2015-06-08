@@ -1222,15 +1222,23 @@ Opções: <code class="docutils literal"><span class="pre">Seg</span></code>, <c
     <span class="s2">&quot;contato-id&quot;</span><span class="o">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
     <span class="s2">&quot;numero-contato-id&quot;</span><span class="o">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span>
     <span class="s2">&quot;campanha-id&quot;</span><span class="o">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;agente-disponivel&quot;</span><span class="o">:</span> <span class="s2">&quot;Sim&quot;</span>
+    <span class="s2">&quot;agente-disponivel&quot;</span><span class="o">:</span> <span class="s2">&quot;Sim&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero-invalido&quot;</span><span class="o">:</span> <span class="s2">&quot;NAO_PERTENCE_CONTATO&quot;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
+<div class="admonition warning">
+<p class="first admonition-title">Aviso</p>
+<p>O parametro <code class="docutils literal"><span class="pre">numero-invalido</span></code> é opcional, e só deve ser informado caso o número que o agente atendeu não for valido ou
+por não pertencer ao contato ou por não existir.</p>
+<p>Quando esse parametro for passado o discador não discará mais para aquele número.</p>
+<p class="last">Os valores devem ser todos os <strong>MAIUSCULO</strong>.</p>
+</div>
 <table border="1" class="docutils">
 <colgroup>
-<col width="14%" />
-<col width="86%" />
+<col width="13%" />
+<col width="87%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Campo</th>
@@ -1256,7 +1264,10 @@ Opções: <code class="docutils literal"><span class="pre">Seg</span></code>, <c
 <tr class="row-odd"><td>agente-disponivel</td>
 <td>Flag para deixar o agente disponível ou não caso esteja usando a funcionalidade de pausa pós atendimento automatico.</td>
 </tr>
-<tr class="row-even"><td>messageId</td>
+<tr class="row-even"><td>numero-invalido</td>
+<td>Parametro <strong>OPCIONAL</strong>, indica que o número é inválido e pode ser de dois tipos, <code class="docutils literal"><span class="pre">NAO_PERTENCE_CONTATO</span></code> e <code class="docutils literal"><span class="pre">NAO_EXISTE</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>messageId</td>
 <td>Identificação da mensagem que será retornada junto com a resposta.</td>
 </tr>
 </tbody>
@@ -1283,7 +1294,7 @@ Opções: <code class="docutils literal"><span class="pre">Seg</span></code>, <c
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Kennedy Oliveira.
-      Última atualização em May 28, 2015.
+      Última atualização em Jun 08, 2015.
     </p>
   </div>
 
