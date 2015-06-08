@@ -1,7 +1,15 @@
 Change Log
 ==========
 
-Versão 1.1.0 (Atual)
+Versão 1.1.1 (Atual)
+--------------------
+
+Melhorias nos comandos
+^^^^^^^^^^^^^^^^^^^^^^
+
+* ``RESULTADO_CONTATO_DISCADOR``, Adicionando novo atributo ``numero-invalido``, que serve para informar o discador que aquele número não precisa ser mais discado.
+
+Versão 1.1.0
 ------------------
 
 Melhorias internas
