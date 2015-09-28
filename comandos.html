@@ -1242,6 +1242,14 @@ Opções: <code class="docutils literal"><span class="pre">Seg</span></code>, <c
 <p class="last">O atributo <code class="docutils literal"><span class="pre">agendamento-cod-referencia</span></code> não sofre nenhuma modificação pelo Catix, e não é usado por ele, existe apenas para os desenvolvedores utilizarem a fim de adicionar
 informações customizadas ao agendamento.</p>
 </div>
+<div class="admonition tip">
+<p class="first admonition-title">Dica</p>
+<p class="last">Um pouco antes de iniciar uma chamada agendada pelo sistema, o Catix enviará um evento <a class="reference internal" href="eventos.html#notificacao-ligacao-agendada"><span>SCHEDULED_CALL_COMING</span></a>.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Dica</p>
+<p class="last">Quando o agente atender uma chamada agendada, o Catix enviará um evento de atendimento especial <a class="reference internal" href="eventos.html#ligacao-agendada-atendida"><span>SCHEDULED_CALL_ASNWER</span></a>.</p>
+</div>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />

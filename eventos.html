@@ -582,28 +582,31 @@ para ser usado no retorno para identificar a quem pertence o agendamento.</td>
 <div class="section" id="scheduled-call-asnwer">
 <span id="ligacao-agendada-atendida"></span><h2>SCHEDULED_CALL_ASNWER<a class="headerlink" href="#scheduled-call-asnwer" title="Link permanente para este título">¶</a></h2>
 <p><strong>Descrição:</strong> Notificação enviada quando um destino atende uma chamada que é agendada.</p>
-<div class="highlight-javascript"><div class="highlight"><pre>{
-  &quot;tipo&quot;: &quot;EVENTO&quot;,
-  &quot;informacao&quot;: &quot;SCHEDULED_CALL_ANSWER&quot;,
-  &quot;atributos&quot;: {
-    &quot;agendamento-id&quot;: &quot;15&quot;,
-    &quot;agendamento-destino-tipo&quot;: &quot;Agente&quot;,
-    &quot;agendamento-destino-tipo-id&quot;: &quot;13&quot;,
-    &quot;agendamento-cod-referencia&quot;: &quot;123456789&quot;,
-    &quot;contato-id&quot;: &quot;15&quot;,
-    &quot;contato-cpfcnpj&quot;: &quot;40002866749&quot;,
-    &quot;contato-contrato&quot;: &quot;102346123&quot;,
-    &quot;numero-contato-id&quot;: &quot;5678&quot;,
-    &quot;numero-contato&quot;: &quot;17991234798&quot;,
-    &quot;numero-agendamento-id&quot;: “1234&quot;,
-
-    “numero-agendamento”:”17123456778”,
-    &quot;rl&quot;: &quot;12345&quot;,
-    &quot;linked-rl&quot;: &quot;12345&quot;
-  },
-  &quot;messageId&quot;: &quot;1&quot;
-}
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;EVENTO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;SCHEDULED_CALL_ANSWER&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;agendamento-id&quot;</span><span class="o">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-destino-tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;Agente&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-destino-tipo-id&quot;</span><span class="o">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-cod-referencia&quot;</span><span class="o">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;contato-id&quot;</span><span class="o">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;contato-cpfcnpj&quot;</span><span class="o">:</span> <span class="s2">&quot;40002866749&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;contato-contrato&quot;</span><span class="o">:</span> <span class="s2">&quot;102346123&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero-contato-id&quot;</span><span class="o">:</span> <span class="s2">&quot;5678&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero-contato&quot;</span><span class="o">:</span> <span class="s2">&quot;17991234798&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero-agendamento-id&quot;</span><span class="o">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero-agendamento&quot;</span><span class="o">:</span><span class="s2">&quot;17123456778&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rl&quot;</span><span class="o">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;linked-rl&quot;</span><span class="o">:</span> <span class="s2">&quot;12345&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
 </pre></div>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Importante</p>
+<p class="last">Os atributos envolvendo informações de contato só apareceram se for uma ligação agendada de um mailing, que foi agendada durante uma ligação de discador.</p>
 </div>
 <p><strong>Atributos</strong></p>
 <table border="1" class="docutils">
