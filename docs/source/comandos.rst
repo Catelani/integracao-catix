@@ -905,6 +905,10 @@ AGENDAR_CHAMADA
 .. note:: O atributo ``agendamento-cod-referencia`` não sofre nenhuma modificação pelo Catix, e não é usado por ele, existe apenas para os desenvolvedores utilizarem a fim de adicionar 
           informações customizadas ao agendamento.
 
+.. tip:: Um pouco antes de iniciar uma chamada agendada pelo sistema, o Catix enviará um evento :ref:`notificacao_ligacao_agendada`.
+
+.. tip:: Quando o agente atender uma chamada agendada, o Catix enviará um evento de atendimento especial :ref:`ligacao_agendada_atendida`.
+
 +----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | campo                      | descrição                                                                                                                                                                  |
 +============================+============================================================================================================================================================================+

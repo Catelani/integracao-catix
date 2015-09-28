@@ -322,13 +322,16 @@ SCHEDULED_CALL_ASNWER
         "contato-contrato": "102346123",
         "numero-contato-id": "5678",
         "numero-contato": "17991234798",
-        "numero-agendamento-id": “1234",     
-        “numero-agendamento”:”17123456778”,
+        "numero-agendamento-id": "1234",
+        "numero-agendamento":"17123456778",
         "rl": "12345",
         "linked-rl": "12345"
       },
       "messageId": "1"
     } 
+
+.. important:: Os atributos envolvendo informações de contato só apareceram se for uma ligação agendada de um mailing, que foi agendada durante uma ligação de discador.
+
 
 **Atributos**
 
