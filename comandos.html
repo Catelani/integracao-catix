@@ -73,13 +73,23 @@
           
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-1-0-atual">Versão 1.1.0 (Atual)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-2-0-atual">Versão 1.2.0 (Atual)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-comandos">Novos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhoria-nos-eventos">Melhoria nos eventos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novas-mensagens-de-erro">Novas mensagens de erro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-1-1">Versão 1.1.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-comandos">Melhorias nos comandos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-1-0">Versão 1.1.0</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-internas">Melhorias internas</a></li>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-eventos">Melhorias nos eventos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-comandos">Melhorias nos comandos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-comandos">Novos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id1">Melhorias nos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id2">Novos comandos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-eventos">Novos eventos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#novas-mensagens-de-erro">Novas mensagens de erro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id3">Novas mensagens de erro</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-0-0">Versão 1.0.0</a></li>
@@ -118,6 +128,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#buscar-estrategias-chamada">BUSCAR_ESTRATEGIAS_CHAMADA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#buscar-campanhas">BUSCAR_CAMPANHAS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#importar-mailing">IMPORTAR_MAILING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agendar-chamada">AGENDAR_CHAMADA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resultado-agendamento">RESULTADO_AGENDAMENTO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resultado-contato-discador">RESULTADO_CONTATO_DISCADOR</a></li>
 </ul>
@@ -1167,6 +1178,100 @@ Opções: <code class="docutils literal"><span class="pre">Seg</span></code>, <c
 </tbody>
 </table>
 </div>
+<div class="section" id="agendar-chamada">
+<h2>AGENDAR_CHAMADA<a class="headerlink" href="#agendar-chamada" title="Link permanente para este título">¶</a></h2>
+<p><strong>Descrição:</strong> Cria um agendamento para o agente de um número que ele escolher ou para um contato do mailing.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Aviso</p>
+<p class="last">Há duas formas de agendamento, a primeira é informando o parametro <code class="docutils literal"><span class="pre">agendamento-contato-id</span></code> para que seja feito um agendamento de contatos do discador, a segunda maneira é não informando o <code class="docutils literal"><span class="pre">agendamento-contato-id</span></code> e informando uma lista de números no parametro <code class="docutils literal"><span class="pre">agendamento-numeros</span></code>, o agendamento será feito para esses números.</p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Importante</p>
+<p class="last">Quando usando a segunda maneira de agendamento, utilizando o atributo <code class="docutils literal"><span class="pre">agendamento-numeros</span></code>, os números serão ligados na ordem em que forem especificados.</p>
+</div>
+<p><strong>Agendamento para contato do mailing:</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;AGENDAR_CHAMADA&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;agendamento-data-hora&quot;</span><span class="o">:</span> <span class="s2">&quot;28/09/2015 15:00:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-cod-referencia&quot;</span><span class="o">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-descricao&quot;</span><span class="o">:</span> <span class="s2">&quot;Agendamento para o Cicero&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-numeros&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="s2">&quot;17991351234&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;1732222233&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Agendamento para números sem ser do mailing:</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;ACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;comando&quot;</span><span class="o">:</span> <span class="s2">&quot;AGENDAR_CHAMADA&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;agendamento-data-hora&quot;</span><span class="o">:</span> <span class="s2">&quot;28/09/2015 15:00:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-descricao&quot;</span><span class="o">:</span> <span class="s2">&quot;Agendamento para o Cicero&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-numeros&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="s2">&quot;17991351234&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;1732222233&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Importante</p>
+<p class="last">Ao realizar o agendamento o sistema devolverá o ID do agendamento no atributo <code class="docutils literal"><span class="pre">agendamento-id</span></code> na resposta.</p>
+</div>
+<p><strong>Exemplo de resposta:</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;NOTIFICACAO&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;informacao&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;atributos&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;agendamento-id&quot;</span><span class="o">:</span> <span class="s2">&quot;15&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">O atributo <code class="docutils literal"><span class="pre">agendamento-cod-referencia</span></code> não sofre nenhuma modificação pelo Catix, e não é usado por ele, existe apenas para os desenvolvedores utilizarem a fim de adicionar
+informações customizadas ao agendamento.</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">campo</th>
+<th class="head">descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>agendamento-contato-id</td>
+<td>ID do contato de um mailing no Catix. Essa informação vem junto com o evento <a class="reference internal" href="eventos.html#atendeu-ligacao-preditivo"><span>AGENT_RECEIVED_DIALER_CALL</span></a>.</td>
+</tr>
+<tr class="row-odd"><td>agendamento-descricao</td>
+<td>Um texto descrevendo o agendamento, esse parametro é opcional, é apenas para facilitar a consulta no Catix e identificação dos motivos do agendamento pelo próprio Agente.</td>
+</tr>
+<tr class="row-even"><td>agendamento-cod-referencia</td>
+<td>Código que será devolvido junto com os eventos <a class="reference internal" href="eventos.html#notificacao-ligacao-agendada"><span>SCHEDULED_CALL_COMING</span></a> e <a class="reference internal" href="eventos.html#ligacao-agendada-atendida"><span>SCHEDULED_CALL_ASNWER</span></a>.
+Pode ser usado para identificar um agendamento de acordo com as necessidades do cliente.</td>
+</tr>
+<tr class="row-odd"><td>agendamento-data-hora</td>
+<td>Data que será feita a ligação no formato <code class="docutils literal"><span class="pre">dd/MM/yyyy</span> <span class="pre">kk:mm:ss</span></code>.</td>
+</tr>
+<tr class="row-even"><td>agendamento-numeros</td>
+<td>Array com os números que devem ser ligados, os números <strong>NÃO</strong> precisam ter o 0 no inicio, apenas o DDD + Número. Ex: <code class="docutils literal"><span class="pre">17991351234</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="resultado-agendamento">
 <h2>RESULTADO_AGENDAMENTO<a class="headerlink" href="#resultado-agendamento" title="Link permanente para este título">¶</a></h2>
 <p><strong>Descrição:</strong> Informa o Catix do resultado de um agendamento.</p>
@@ -1294,7 +1399,7 @@ por não pertencer ao contato ou por não existir.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Kennedy Oliveira.
-      Última atualização em Jun 08, 2015.
+      Última atualização em Sep 28, 2015.
     </p>
   </div>
 

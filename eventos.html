@@ -73,13 +73,23 @@
           
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-1-0-atual">Versão 1.1.0 (Atual)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-2-0-atual">Versão 1.2.0 (Atual)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-comandos">Novos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhoria-nos-eventos">Melhoria nos eventos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novas-mensagens-de-erro">Novas mensagens de erro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-1-1">Versão 1.1.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-comandos">Melhorias nos comandos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-1-0">Versão 1.1.0</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-internas">Melhorias internas</a></li>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-eventos">Melhorias nos eventos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-comandos">Melhorias nos comandos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-comandos">Novos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id1">Melhorias nos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id2">Novos comandos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-eventos">Novos eventos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#novas-mensagens-de-erro">Novas mensagens de erro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id3">Novas mensagens de erro</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-0-0">Versão 1.0.0</a></li>
@@ -118,6 +128,7 @@
 <li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-estrategias-chamada">BUSCAR_ESTRATEGIAS_CHAMADA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-campanhas">BUSCAR_CAMPANHAS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comandos.html#importar-mailing">IMPORTAR_MAILING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#agendar-chamada">AGENDAR_CHAMADA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comandos.html#resultado-agendamento">RESULTADO_AGENDAMENTO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comandos.html#resultado-contato-discador">RESULTADO_CONTATO_DISCADOR</a></li>
 </ul>
@@ -522,7 +533,7 @@
 </div>
 </div>
 <div class="section" id="scheduled-call-coming">
-<h2>SCHEDULED_CALL_COMING<a class="headerlink" href="#scheduled-call-coming" title="Link permanente para este título">¶</a></h2>
+<span id="notificacao-ligacao-agendada"></span><h2>SCHEDULED_CALL_COMING<a class="headerlink" href="#scheduled-call-coming" title="Link permanente para este título">¶</a></h2>
 <p><strong>Descrição:</strong> Notificação de que uma ligação agendada está prestes a acontecer, em x tempo, esse tempo é configurado no Catix e é valido para todas as ligações agendadas.</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
   <span class="s2">&quot;tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;EVENTO&quot;</span><span class="p">,</span>
@@ -531,7 +542,8 @@
     <span class="s2">&quot;agendamento-id&quot;</span><span class="o">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
     <span class="s2">&quot;agendamento-data-hora&quot;</span><span class="o">:</span> <span class="s2">&quot;08/04/2015 19:13:22&quot;</span><span class="p">,</span>
     <span class="s2">&quot;agendamento-destino-tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;Agente&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;agendamento-destino-tipo-id&quot;</span><span class="o">:</span> <span class="s2">&quot;13&quot;</span>
+    <span class="s2">&quot;agendamento-destino-tipo-id&quot;</span><span class="o">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;agendamento-cod-referencia&quot;</span><span class="o">:</span> <span class="s2">&quot;1234&quot;</span>
   <span class="p">},</span>
   <span class="s2">&quot;messageId&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
 <span class="p">}</span>
@@ -539,8 +551,8 @@
 </div>
 <table border="1" class="docutils">
 <colgroup>
-<col width="36%" />
-<col width="64%" />
+<col width="25%" />
+<col width="75%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Campo</th>
@@ -560,11 +572,15 @@
 <tr class="row-odd"><td>atributos-agendamento-destino-tipo-id</td>
 <td>Identificação no Catix do destino.</td>
 </tr>
+<tr class="row-even"><td>atributos-agendamento-cod-referencia</td>
+<td>Código de referencia que pode ser fornecido na criação do agendamento ou <code class="docutils literal"><span class="pre">-</span></code> caso nenhum tenha sido fornecido,
+para ser usado no retorno para identificar a quem pertence o agendamento.</td>
+</tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="scheduled-call-asnwer">
-<h2>SCHEDULED_CALL_ASNWER<a class="headerlink" href="#scheduled-call-asnwer" title="Link permanente para este título">¶</a></h2>
+<span id="ligacao-agendada-atendida"></span><h2>SCHEDULED_CALL_ASNWER<a class="headerlink" href="#scheduled-call-asnwer" title="Link permanente para este título">¶</a></h2>
 <p><strong>Descrição:</strong> Notificação enviada quando um destino atende uma chamada que é agendada.</p>
 <div class="highlight-javascript"><div class="highlight"><pre>{
   &quot;tipo&quot;: &quot;EVENTO&quot;,
@@ -592,8 +608,8 @@
 <p><strong>Atributos</strong></p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="23%" />
-<col width="77%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Campo</th>
@@ -611,8 +627,8 @@
 <td>Identificação no Catix do destino.</td>
 </tr>
 <tr class="row-odd"><td>agendamento-cod-referencia</td>
-<td>Código de referencia que pode ser fornecido na criação do agendamento, para ser usado no
-retorno para identificar a quem pertence o agendamento.</td>
+<td>Código de referencia que pode ser fornecido na criação do agendamento ou <code class="docutils literal"><span class="pre">-</span></code> caso nenhum tenha sido fornecido,
+para ser usado no retorno para identificar a quem pertence o agendamento.</td>
 </tr>
 <tr class="row-even"><td>contato-id</td>
 <td>Id do contato do mailing, esse atributo e os outros relacionados ao contato e numero de contato
@@ -648,7 +664,7 @@ só serão devolvidos caso o agendamento seja de um contato do mailing.</td>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Kennedy Oliveira.
-      Última atualização em Jun 08, 2015.
+      Última atualização em Sep 28, 2015.
     </p>
   </div>
 

@@ -72,13 +72,23 @@
           
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-1-0-atual">Versão 1.1.0 (Atual)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-2-0-atual">Versão 1.2.0 (Atual)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-comandos">Novos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhoria-nos-eventos">Melhoria nos eventos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#novas-mensagens-de-erro">Novas mensagens de erro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-1-1">Versão 1.1.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-comandos">Melhorias nos comandos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-1-0">Versão 1.1.0</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-internas">Melhorias internas</a></li>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-eventos">Melhorias nos eventos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#melhorias-nos-comandos">Melhorias nos comandos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-comandos">Novos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id1">Melhorias nos comandos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id2">Novos comandos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#novos-eventos">Novos eventos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#novas-mensagens-de-erro">Novas mensagens de erro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id3">Novas mensagens de erro</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#versao-1-0-0">Versão 1.0.0</a></li>
@@ -117,6 +127,7 @@
 <li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-estrategias-chamada">BUSCAR_ESTRATEGIAS_CHAMADA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comandos.html#buscar-campanhas">BUSCAR_CAMPANHAS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comandos.html#importar-mailing">IMPORTAR_MAILING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos.html#agendar-chamada">AGENDAR_CHAMADA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comandos.html#resultado-agendamento">RESULTADO_AGENDAMENTO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comandos.html#resultado-contato-discador">RESULTADO_CONTATO_DISCADOR</a></li>
 </ul>
@@ -226,37 +237,41 @@
 <tr class="row-even"><td>1010</td>
 <td>Atributo obrigatório inválido.</td>
 </tr>
-<tr class="row-odd"><td>2000</td>
+<tr class="row-odd"><td>1011</td>
+<td>Contato do mailing com id [ID_ENVIADO] não encontrado.
+Não foi encontrado o contato de ID <code class="docutils literal"><span class="pre">ID_ENVIADO</span></code> em nenhum mailing.</td>
+</tr>
+<tr class="row-even"><td>2000</td>
 <td>Usuário ou senha inválidos no momento da autenticação.</td>
 </tr>
-<tr class="row-even"><td>2001</td>
+<tr class="row-odd"><td>2001</td>
 <td>Usuário não encontrado.</td>
 </tr>
-<tr class="row-odd"><td>2002</td>
+<tr class="row-even"><td>2002</td>
 <td>Autenticação necessária.</td>
 </tr>
-<tr class="row-even"><td>3000</td>
+<tr class="row-odd"><td>3000</td>
 <td>Erro ao iniciar campanha.</td>
 </tr>
-<tr class="row-odd"><td>3001</td>
+<tr class="row-even"><td>3001</td>
 <td>Não foi encontrado campanha com o ID especificado.</td>
 </tr>
-<tr class="row-even"><td>3002</td>
+<tr class="row-odd"><td>3002</td>
 <td>Erro ao pausar campanha.</td>
 </tr>
-<tr class="row-odd"><td>3003</td>
+<tr class="row-even"><td>3003</td>
 <td>Erro ao criar campanha.</td>
 </tr>
-<tr class="row-even"><td>9000</td>
+<tr class="row-odd"><td>9000</td>
 <td>Funcionalidade não implementada.</td>
 </tr>
-<tr class="row-odd"><td>9001</td>
+<tr class="row-even"><td>9001</td>
 <td>Mensagem em branco.</td>
 </tr>
-<tr class="row-even"><td>9002</td>
+<tr class="row-odd"><td>9002</td>
 <td>Mensagem no formato inválido.</td>
 </tr>
-<tr class="row-odd"><td>9999</td>
+<tr class="row-even"><td>9999</td>
 <td>Erro não esperado.</td>
 </tr>
 </tbody>
@@ -280,7 +295,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Kennedy Oliveira.
-      Última atualização em Jun 08, 2015.
+      Última atualização em Sep 28, 2015.
     </p>
   </div>
 
