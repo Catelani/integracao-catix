@@ -403,22 +403,22 @@ TRANSFERIR
       "messageId": "1"
     }
 
-+---------------+-----------------------------------------------------------------------------------------------------------------------+
-| Campos        | Descrição                                                                                                             |
-+===============+=======================================================================================================================+
-| agente        | ID do Catix do agente que vai ter sua ligação transferida.                                                            |
-+---------------+-----------------------------------------------------------------------------------------------------------------------+
-| destino       | Tipo do destino, no momento o sistema somente faz transferências para ``Ramal``, mas é possível obter a lista de      |
-|               | destinos disponíveis e suas opções através do comando ``BUSCAR_OPCOES_TRANSFERENCIA``. Esse campo é opcional caso se  |
-|               | use o ``numeroDiscado``.                                                                                              |
-+---------------+-----------------------------------------------------------------------------------------------------------------------+
-| idDestino     | Id do destino a ser transferido, é usado em conjunto com o campo destino. *Ignorado quando o campo* ``numeroDiscado`` |
-|               | *for informado.*                                                                                                      |
-+---------------+-----------------------------------------------------------------------------------------------------------------------+
-| numeroDiscado | Número do ramal a ser transferido, caso este campo esteja preenchido, o campo destino e IdDestino serão ignorados.    |
-+---------------+-----------------------------------------------------------------------------------------------------------------------+
-| messageId     | Identificação da mensagem que será retornada junto com a resposta.                                                    |
-+---------------+-----------------------------------------------------------------------------------------------------------------------+
++---------------+-------------------------------------------------------------------------------------------------------------------------------+
+| Campos        | Descrição                                                                                                                     |
++===============+===============================================================================================================================+
+| agente        | ID do Catix do agente que vai ter sua ligação transferida.                                                                    |
++---------------+-------------------------------------------------------------------------------------------------------------------------------+
+| destino       | Tipo do destino, no momento o sistema somente faz transferências para ``Ramal`` e ``Agente``, mas é possível obter a lista de |
+|               | destinos disponíveis e suas opções através do comando ``BUSCAR_OPCOES_TRANSFERENCIA``. Esse campo é opcional caso se          |
+|               | use o ``numeroDiscado``.                                                                                                      |
++---------------+-------------------------------------------------------------------------------------------------------------------------------+
+| idDestino     | Id do destino a ser transferido, é usado em conjunto com o campo destino. *Ignorado quando o campo* ``numeroDiscado``         |
+|               | *for informado.*                                                                                                              |
++---------------+-------------------------------------------------------------------------------------------------------------------------------+
+| numeroDiscado | Número do ramal a ser transferido, caso este campo esteja preenchido, o campo destino e IdDestino serão ignorados.            |
++---------------+-------------------------------------------------------------------------------------------------------------------------------+
+| messageId     | Identificação da mensagem que será retornada junto com a resposta.                                                            |
++---------------+-------------------------------------------------------------------------------------------------------------------------------+
 
 .. warning:: Na transferência temos duas opções: uma é informando o ``destino`` e o ``idDestino`` e a outra é passando o número do ramal no número discado.
 
@@ -447,7 +447,7 @@ BUSCAR_OPCOES_TRANSFERENCIA
           {
             "id": 2,
             "nome": "100"
-          },
+          },  
           {
             "id": 3,
             "nome": "101"
@@ -467,6 +467,16 @@ BUSCAR_OPCOES_TRANSFERENCIA
           {
             "id": 15,
             "nome": "123"
+          }
+        ],
+        "agente": [
+          {
+            "id": 15,
+            "nome": "Cido"
+          },
+          {
+            "id": 16,
+            "nome": "Cicero"
           }
         ]
       }
