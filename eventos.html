@@ -436,6 +436,7 @@
     <span class="s2">&quot;origem-tipo&quot;</span><span class="o">:</span> <span class="s2">&quot;AGENTE&quot;</span><span class="p">,</span>
     <span class="s2">&quot;origem-nome&quot;</span><span class="o">:</span> <span class="s2">&quot;kennedy&quot;</span><span class="p">,</span>
     <span class="s2">&quot;numero-discado&quot;</span><span class="o">:</span> <span class="s2">&quot;17991762908&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tipo-ligacao&quot;</span><span class="o">:</span> <span class="s2">&quot;SAINTE&quot;</span><span class="p">,</span>
     <span class="s2">&quot;rl&quot;</span><span class="o">:</span> <span class="s2">&quot;5084&quot;</span><span class="p">,</span>
     <span class="s2">&quot;linked-rl&quot;</span><span class="o">:</span> <span class="s2">&quot;5084&quot;</span>
   <span class="p">}</span>
@@ -444,8 +445,8 @@
 </div>
 <table border="1" class="docutils">
 <colgroup>
-<col width="24%" />
-<col width="76%" />
+<col width="15%" />
+<col width="85%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Campo</th>
@@ -456,13 +457,22 @@
 <tr class="row-even"><td>agente</td>
 <td>ID do Catix do agente que atendeu a ligação.</td>
 </tr>
-<tr class="row-odd"><td>atributos-origem-nome</td>
+<tr class="row-odd"><td>atributos-origem-tipo</td>
+<td>Tipo de origem da chamada, pode ser <code class="docutils literal"><span class="pre">RAMAL</span></code>, <code class="docutils literal"><span class="pre">AGENTE</span></code> ou <code class="docutils literal"><span class="pre">USUARIO</span></code>.</td>
+</tr>
+<tr class="row-even"><td>atributos-origem-nome</td>
 <td>Nome do agente que fez a ligação.</td>
 </tr>
-<tr class="row-even"><td>atributos-rl</td>
+<tr class="row-odd"><td>atributos-numero-discado</td>
+<td>Número discado pelo PA caso seja uma ligação <code class="docutils literal"><span class="pre">SAINTE</span></code>, ou bina do número que ligou caso seja uma ligação <code class="docutils literal"><span class="pre">ENTRANTE</span></code>.</td>
+</tr>
+<tr class="row-even"><td>atributos-tipo-ligacao</td>
+<td>Tipo da ligação atendida, pode ser <code class="docutils literal"><span class="pre">SAINTE</span></code>, <code class="docutils literal"><span class="pre">ENTRANTE</span></code>, <code class="docutils literal"><span class="pre">INTERNA</span></code>, <code class="docutils literal"><span class="pre">TRANSFERENCIA</span></code>, <code class="docutils literal"><span class="pre">INTERNA</span></code>, <code class="docutils literal"><span class="pre">REDIRECIONAMENTO</span></code> ou <code class="docutils literal"><span class="pre">PREDITIVO</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>atributos-rl</td>
 <td>Identificação da chamada no Catix.</td>
 </tr>
-<tr class="row-odd"><td>atributos-linked-rl</td>
+<tr class="row-even"><td>atributos-linked-rl</td>
 <td>Identificação de todas as chamadas relacionadas a essa chamada no Catix.</td>
 </tr>
 </tbody>
