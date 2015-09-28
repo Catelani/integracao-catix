@@ -841,6 +841,84 @@ Exemplo de Retorno:
 | messageId              | Identificação da mensagem que será retornada junto com a resposta.                                                     |
 +------------------------+------------------------------------------------------------------------------------------------------------------------+
 
+AGENDAR_CHAMADA
+"""""""""""""""
+
+**Descrição:** Cria um agendamento para o agente de um número que ele escolher ou para um contato do mailing.
+
+.. warning:: Há duas formas de agendamento, a primeira é informando o parametro ``agendamento-contato-id`` para que seja feito um agendamento de contatos do discador, a segunda maneira é não informando o ``agendamento-contato-id`` e informando uma lista de números no parametro ``agendamento-numeros``, o agendamento será feito para esses números.
+
+.. important:: Quando usando a segunda maneira de agendamento, utilizando o atributo ``agendamento-numeros``, os números serão ligados na ordem em que forem especificados.
+
+**Agendamento para contato do mailing:**
+
+.. code-block:: javascript
+
+    {
+      "tipo": "ACAO",
+      "comando": "AGENDAR_CHAMADA",
+      "atributos": {
+        "agendamento-data-hora": "28/09/2015 15:00:00",
+        "agendamento-cod-referencia": "1234",
+        "agendamento-descricao": "Agendamento para o Cicero",
+        "agendamento-numeros": [
+          "17991351234",
+          "1732222233"
+        ]
+      },
+      "messageId": "1"
+    }
+
+**Agendamento para números sem ser do mailing:**
+
+.. code-block:: javascript
+
+    {
+      "tipo": "ACAO",
+      "comando": "AGENDAR_CHAMADA",
+      "atributos": {
+        "agendamento-data-hora": "28/09/2015 15:00:00",
+        "agendamento-descricao": "Agendamento para o Cicero",
+        "agendamento-numeros": [
+          "17991351234",
+          "1732222233"
+        ]
+      },
+      "messageId": "1"
+    }
+
+.. important:: Ao realizar o agendamento o sistema devolverá o ID do agendamento no atributo ``agendamento-id`` na resposta.
+
+**Exemplo de resposta:**
+
+.. code-block:: javascript
+
+    {
+      "tipo": "NOTIFICACAO",
+      "informacao": "OK",
+      "atributos": {
+        "agendamento-id": "15"
+      },
+      "messageId": "1"
+    }
+
+.. note:: O atributo ``agendamento-cod-referencia`` não sofre nenhuma modificação pelo Catix, e não é usado por ele, existe apenas para os desenvolvedores utilizarem a fim de adicionar 
+          informações customizadas ao agendamento.
+
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| campo                      | descrição                                                                                                                                                                  |
++============================+============================================================================================================================================================================+
+| agendamento-contato-id     | ID do contato de um mailing no Catix. Essa informação vem junto com o evento :ref:`atendeu_ligacao_preditivo`.                                                             |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| agendamento-descricao      | Um texto descrevendo o agendamento, esse parametro é opcional, é apenas para facilitar a consulta no Catix e identificação dos motivos do agendamento pelo próprio Agente. |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| agendamento-cod-referencia | Código que será devolvido junto com os eventos :ref:`notificacao_ligacao_agendada` e :ref:`ligacao_agendada_atendida`.                                                     |
+|                            | Pode ser usado para identificar um agendamento de acordo com as necessidades do cliente.                                                                                   |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| agendamento-data-hora      | Data que será feita a ligação no formato ``dd/MM/yyyy kk:mm:ss``.                                                                                                          |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| agendamento-numeros        | Array com os números que devem ser ligados, os números **NÃO** precisam ter o 0 no inicio, apenas o DDD + Número. Ex: ``17991351234``.                                     |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 RESULTADO_AGENDAMENTO
 """""""""""""""""""""

@@ -138,10 +138,9 @@ DIALING
 
 **Descrição:** Evento enviado quando o sistema está discando para um número, que **NÃO** é do discador.
 
-
 .. important:: Esse evento **somente** sera enviado caso a ligação seja partindo de um ``AGENTE``, se for do discador não será enviado, nem se for do Ramal.
-Porém, a ligação do agente pode ser feita via integração ou via Painel do Agente no Catix.
 
+Porém, a ligação do agente pode ser feita via integração ou via Painel do Agente no Catix.
 
 .. code-block:: javascript
 
@@ -264,6 +263,7 @@ AGENT_RECEIVED_DIALER_CALL
       }
     }
 
+.. _notificacao_ligacao_agendada:
 
 SCHEDULED_CALL_COMING
 """""""""""""""""""""
@@ -279,22 +279,28 @@ SCHEDULED_CALL_COMING
         "agendamento-id": "15",
         "agendamento-data-hora": "08/04/2015 19:13:22",
         "agendamento-destino-tipo": "Agente",
-        "agendamento-destino-tipo-id": "13"
+        "agendamento-destino-tipo-id": "13",
+        "agendamento-cod-referencia": "1234"
       },
       "messageId": "1"
     }
 
-+---------------------------------------+---------------------------------------------------------------------+
-| Campo                                 | Descrição                                                           |
-+=======================================+=====================================================================+
-| atributos-agendamento-id              | Id do agendamento                                                   |
-+---------------------------------------+---------------------------------------------------------------------+
-| atributos-agendamento-data-hora       | Data e hora do agendamento                                          |
-+---------------------------------------+---------------------------------------------------------------------+
-| atributos-agendamento-destino-tipo    | Tipo do destino no Catix, atualmente o único possível é ``Agente``. |
-+---------------------------------------+---------------------------------------------------------------------+
-| atributos-agendamento-destino-tipo-id | Identificação no Catix do destino.                                  |
-+---------------------------------------+---------------------------------------------------------------------+
++---------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| Campo                                 | Descrição                                                                                                        |
++=======================================+==================================================================================================================+
+| atributos-agendamento-id              | Id do agendamento                                                                                                |
++---------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| atributos-agendamento-data-hora       | Data e hora do agendamento                                                                                       |
++---------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| atributos-agendamento-destino-tipo    | Tipo do destino no Catix, atualmente o único possível é ``Agente``.                                              |
++---------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| atributos-agendamento-destino-tipo-id | Identificação no Catix do destino.                                                                               |
++---------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| atributos-agendamento-cod-referencia  | Código de referencia que pode ser fornecido na criação do agendamento ou ``-`` caso nenhum tenha sido fornecido, |
+|                                       | para ser usado no retorno para identificar a quem pertence o agendamento.                                        |
++---------------------------------------+------------------------------------------------------------------------------------------------------------------+
+
+.. _ligacao_agendada_atendida:
 
 SCHEDULED_CALL_ASNWER
 """""""""""""""""""""
@@ -326,23 +332,23 @@ SCHEDULED_CALL_ASNWER
 
 **Atributos**
 
-+-----------------------------+-------------------------------------------------------------------------------------------------+
-| Campo                       | Descrição                                                                                       |
-+=============================+=================================================================================================+
-| agendamento-id              | Identificação do agendamento no Catix                                                           |
-+-----------------------------+-------------------------------------------------------------------------------------------------+
-| agendamento-destino-tipo    | Tipo do destino no Catix, atualmente o único possível é ``Agente``                              |
-+-----------------------------+-------------------------------------------------------------------------------------------------+
-| agendamento-destino-tipo-id | Identificação no Catix do destino.                                                              |
-+-----------------------------+-------------------------------------------------------------------------------------------------+
-| agendamento-cod-referencia  | Código de referencia que pode ser fornecido na criação do agendamento, para ser usado no        |
-|                             | retorno para identificar a quem pertence o agendamento.                                         |
-+-----------------------------+-------------------------------------------------------------------------------------------------+
-| contato-id                  | Id do contato do mailing, esse atributo e os outros relacionados ao contato e numero de contato |
-|                             | só serão devolvidos caso o agendamento seja de um contato do mailing.                           |
-+-----------------------------+-------------------------------------------------------------------------------------------------+
-| numero-agendamento-id       | ID do número discado, esse atributo só será devolvido caso não seja um contato do mailing.      |
-+-----------------------------+-------------------------------------------------------------------------------------------------+
-| numero-agendamento          | Número discador caso não seja um contato do mailing.                                            |
-+-----------------------------+-------------------------------------------------------------------------------------------------+
++-----------------------------+------------------------------------------------------------------------------------------------------------------+
+| Campo                       | Descrição                                                                                                        |
++=============================+==================================================================================================================+
+| agendamento-id              | Identificação do agendamento no Catix                                                                            |
++-----------------------------+------------------------------------------------------------------------------------------------------------------+
+| agendamento-destino-tipo    | Tipo do destino no Catix, atualmente o único possível é ``Agente``                                               |
++-----------------------------+------------------------------------------------------------------------------------------------------------------+
+| agendamento-destino-tipo-id | Identificação no Catix do destino.                                                                               |
++-----------------------------+------------------------------------------------------------------------------------------------------------------+
+| agendamento-cod-referencia  | Código de referencia que pode ser fornecido na criação do agendamento ou ``-`` caso nenhum tenha sido fornecido, |
+|                             | para ser usado no retorno para identificar a quem pertence o agendamento.                                        |
++-----------------------------+------------------------------------------------------------------------------------------------------------------+
+| contato-id                  | Id do contato do mailing, esse atributo e os outros relacionados ao contato e numero de contato                  |
+|                             | só serão devolvidos caso o agendamento seja de um contato do mailing.                                            |
++-----------------------------+------------------------------------------------------------------------------------------------------------------+
+| numero-agendamento-id       | ID do número discado, esse atributo só será devolvido caso não seja um contato do mailing.                       |
++-----------------------------+------------------------------------------------------------------------------------------------------------------+
+| numero-agendamento          | Número discador caso não seja um contato do mailing.                                                             |
++-----------------------------+------------------------------------------------------------------------------------------------------------------+
 

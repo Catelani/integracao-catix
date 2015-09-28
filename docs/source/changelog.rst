@@ -1,7 +1,27 @@
 Change Log
 ==========
 
-Versão 1.1.1 (Atual)
+Versão 1.2.0 (Atual)
+--------------------
+
+Novos comandos
+^^^^^^^^^^^^^^
+
+* ``AGENDAR_CHAMADA``, agenda uma chamada de um número do discador ou de números que o cliente quiser.
+  
+Melhoria nos eventos
+^^^^^^^^^^^^^^^^^^^^^
+
+* ``SCHEDULED_CALL_COMING``, adicionado atributo ``agendamento-cod-referencia``.
+
+Novas mensagens de erro
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. tip:: Consulte a :ref:`lista_erros` para saber mais. 
+
+* 1011 -> Contato do mailing com id [ID_ENVIADO] não encontrado.
+
+Versão 1.1.1
 --------------------
 
 Melhorias nos comandos
@@ -66,6 +86,6 @@ Novas mensagens de erro
 * 3003
 
 Versão 1.0.0
-----------
+------------
 
 *Release inicial*
